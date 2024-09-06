@@ -1,0 +1,49 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1204 -- Word Puzzles</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1204"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1204&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Word Puzzles</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 5000MS</td><td width="10px"></td><td colspan="3"><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 13814</td><td width="10px"></td><td><b>Accepted:</b> 5222</td><td width="10px"></td><td style="font-weight:bold; color:red;">Special Judge</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Word puzzles are usually simple and very entertaining for all ages. They are so entertaining that Pizza-Hut company started using table covers with word puzzles printed on them, possibly with the intent to minimise their client's perception of any possible delay in bringing them their order. <br/> <br/>Even though word puzzles may be entertaining to solve by hand, they may become boring when they get very large. Computers do not yet get bored in solving tasks, therefore we thought you could devise a program to speedup (hopefully!) solution finding in such puzzles. <br/> <br/>The following figure illustrates the PizzaHut puzzle. The names of the pizzas to be found in the puzzle are: MARGARITA, ALEMA, BARBECUE, TROPICAL, SUPREMA, LOUISIANA, CHEESEHAM, EUROPA, HAVAIANA, CAMPONESA. <br/><center><img src="../images/1204_1.jpg"/></center> <br/>Your task is to produce a program that given the word puzzle and words to be found in the puzzle, determines, for each word, the position of the first letter and its orientation in the puzzle. <br/> <br/>You can assume that the left upper corner of the puzzle is the origin, (0,0). Furthemore, the orientation of the word is marked clockwise starting with letter A for north (note: there are 8 possible directions in total). <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input consists of three positive numbers, the number of lines, 0 &lt; L &lt;= 1000, the number of columns, 0 &lt; C &lt;= 1000, and the number of words to be found, 0 &lt; W &lt;= 1000. The following L input lines, each one of size C characters, contain the word puzzle. Then at last the W words are input one per line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should output, for each word (using the same order as the words were input) a triplet defining the coordinates, line and column, where the first letter of the word appears, followed by a letter indicating the orientation of the word according to the rules define above. Each value in the triplet must be separated by one space only. </div><p class="pst">Sample Input</p><pre class="sio">20 20 10
+QWSPILAATIRAGRAMYKEI
+AGTRCLQAXLPOIJLFVBUQ
+TQTKAZXVMRWALEMAPKCW
+LIEACNKAZXKPOTPIZCEO
+FGKLSTCBTROPICALBLBC
+JEWHJEEWSMLPOEKORORA
+LUPQWRNJOAAGJKMUSJAE
+KRQEIOLOAOQPRTVILCBZ
+QOPUCAJSPPOUTMTSLPSF
+LPOUYTRFGMMLKIUISXSW
+WAHCPOIYTGAKLMNAHBVA
+EIAKHPLBGSMCLOGNGJML
+LDTIKENVCSWQAZUAOEAL
+HOPLPGEJKMNUTIIORMNC
+LOIUFTGSQACAXMOPBEIO
+QOASDHOPEPNBUYUYOBXB
+IONIAELOJHSWASMOUTRK
+HPOIYTJPLNAQWDRIBITG
+LPOINUYMRTEMPTMLMNBO
+PAFCOPLHAVAIANALBPFS
+MARGARITA
+ALEMA
+BARBECUE
+TROPICAL
+SUPREMA
+LOUISIANA
+CHEESEHAM
+EUROPA
+HAVAIANA
+CAMPONESA</pre><p class="pst">Sample Output</p><pre class="sio">0 15 G
+2 11 C
+7 18 A
+4 8 C
+16 13 B
+4 15 E
+10 3 D
+5 1 E
+19 7 C
+11 11 H</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Southwestern+Europe+2002">Southwestern Europe 2002</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1204">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1204">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1204">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

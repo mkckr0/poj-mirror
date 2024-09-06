@@ -1,0 +1,43 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1394 -- Railroad</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1394"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1394&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Railroad</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 2000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 1351</td><td width="10px"></td><td><b>Accepted:</b> 413</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">It is Friday evening and Jill hates two things which are common to all trains:<br/> <br/>1. They are always late.<br/> <br/>2. The posted schedule is always wrong.<br/> <br/>Nevertheless, tomorrow in the early morning hours Jill will have to travel from Tuttlingen to Freiburg in order to get to the Regional Programming Contest. Since she is afraid of arriving too late and being excluded from the contest, she is looking for the train which gets her to Freiburg as early as possible.<br/> <br/>However, she dislikes getting to the station too early, so if there are several schedules with the same arrival time, she will choose the one with the latest departure time.<br/> <br/>Jill asks you to help her with her problem, so that she can sleep a bit longer tomorrow. You are given a set of railroad schedules from which you have to compute the fastest connection among those with the earliest arrival time for going from one location to another. One good thing: Jill is very experienced in switching trains: she can do this instantaneously, i.e., in zero time!!!<br/> <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains several scenarios. Each of them consists of three parts.<br/> <br/>Part one lists the names of all cities connected by the railroads. It starts with a line containing an integer C (1 &lt;= C &lt;= 100) followed by C lines containing city names. These names consist of letters.<br/> <br/>Part two describes all the trains running during the day. It starts with a number T &lt;= 1000 followed by T train descriptions. Each train description consists of one line with a number ti &lt;= 100 and ti more lines with a time and a city name, meaning that passengers can get on or off the train at that time at that city. The times are given in the 24-hour format hhmm.<br/> <br/>Part three consists of three lines: Line one contains the earliest possible starting time for the journey, line two the name of the city where she starts, and line three the destination city. The two cities are always different.<br/> <br/>The end of the input file is marked by a line containing only a zero (instead of C). Do not process this line.<br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario print the line "Scenario #n" where n is the number of the scenario starting at 1.<br/> <br/>If a connection exists then print the two lines containing zero padded timestamps and locations as shown in the sample output. Use blanks to achieve the indentation. If no connection exists on the same day (i.e., arrival before midnight), then print a line containing "No connection".<br/> <br/>After each scenario print a blank line. </div><p class="pst">Sample Input</p><pre class="sio">3
+Tuttlingen
+Constance
+Freiburg
+3
+2
+0949 Tuttlingen
+1006 Constance
+2
+1325 Tuttlingen
+1550 Freiburg
+2
+1205 Constance
+1411 Freiburg
+0800
+Tuttlingen
+Freiburg
+2
+Ulm
+Vancouver
+1
+2
+0100 Ulm
+2300 Vancouver
+0800
+Ulm
+Vancouver
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1
+Departure 0949 Tuttlingen
+Arrival   1411 Freiburg
+
+Scenario #2
+No connection </pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Mid-Central+European+Regional+Contest+2000">Mid-Central European Regional Contest 2000</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1394">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1394">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1394">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

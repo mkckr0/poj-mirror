@@ -1,0 +1,85 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1414 -- Life Line</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1414"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1414&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Life Line</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 10000K</td></tr><tr><td><b>Total Submissions:</b> 1185</td><td width="10px"></td><td><b>Accepted:</b> 808</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Let's play a new board game "Life Line".<br/>The number of the players is greater than 1 and less than 10.<br/>In this game, the board is a regular triangle in which many small regular triangles are arranged (See Figure 1). The edges of each small triangle are of the same length. <br/><img src="../images/1414_1.jpg"/> <br/>The size of the board is expressed by the number of vertices on the bottom edge of the outer triangle.For example, the size of the board in Figure 1 is 4.<br/> <br/>At the beginning of the game, each player is assigned his own identification number between 1 and 9,and is given some stones on which his identification number is written.<br/> <br/>Each player puts his stone in turn on one of the "empty" vertices. An "empty vertex" is a vertex that has no stone on it.<br/> <br/>When one player puts his stone on one of the vertices during his turn, some stones might be removed from the board. The player gains points which is equal to the number of the removed stones of himself. The points of a player for a single turn is the points he gained minus the points he lost in that turn.<br/> <br/>The conditions for removing stones are as follows : <br/> <br/>1.The stones on the board are divided into groups. Each group contains a set of stones whose numbersare the same and placed adjacently. That is, if the same numbered stones are placed adjacently,they belong to the same group.<br/> <br/>2.If none of the stones in a group is adjacent to at least one "empty" vertex, all the stones in that group are removed from the board.<br/><img src="../images/1414_2.jpg"/> <br/>Figure 2 shows an example of the groups of stones.<br/> <br/>Suppose that the turn of the player '4' comes now. If he puts his stone on the vertex shown in Figure 3a, the conditions will be satisfied to remove some groups of stones (shadowed in Figure 3b). The player gains 6 points, because the 6 stones of others are removed from the board (See Figure 3c).<br/> <br/><img src="../images/1414_3.jpg"/> <br/>As another example, suppose that the turn of the player '2' comes in Figure 2. If the player puts his<br/> <br/>stone on the vertex shown in Figure 4a, the conditions will be satisfied to remove some groups of stones (shadowed in Figure 4b). The player gains 4 points, because the 4 stones of others are removed. But, at the same time, he loses 3 points, because his 3 stones are removed. As the result, the player's points of this turn is 4 ? 3 = 1 (See Figure 4c).<br/><img src="../images/1414_4.jpg"/> <br/>When each player puts all of his stones on the board, the game is over. The total score of a player is the summation of the points of all of his turns.<br/> <br/>Your job is to write a program that tells you the maximum points a player can get (i.e., the points he gains - the points he loses) in his current turn.<br/> <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple data. Each data represents the state of the board of the game still in<br/> <br/>progress. The format of each data is as follows.<br/> <br/>N C<br/>          S<sub>1,1</sub> <br/>      S<sub>2,1</sub> S<sub>2,2</sub> <br/>   S<sub>3,1</sub> S<sub>3,2</sub> S<sub>3,3</sub> <br/>                   .  .  .<br/>S<sub>N,1</sub>   .  .  .    S<sub>N,N</sub> <br/> <br/>N is the size of the board (3 &lt;= N &lt;= 10). C is the identification number of the player whose turn comes now (1 &lt;= C &lt;= 9). That is, your program must calculate his points in this turn. S<sub>i,j</sub> is the state of the vertex on the board (0 &lt;= Si,j &lt;= 9). If the value of Si,j is positive, it means that there is the stone numbered by Si,j there. If the value of S<sub>i,j</sub> is 0, it means that the vertex is "empty". Two zeros in a line, i.e., 0 0, represents the end of the input.<br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data, the maximum points the player can get in the turn should be output, each in a separate line.</div><p class="pst">Sample Input</p><pre class="sio">4 4
+   2
+  2 3
+ 1 0 4
+1 1 4 0
+4 5
+   2
+  2 3
+ 3 0 4
+1 1 4 0
+4 1
+   2
+  2 3
+ 3 0 4
+1 1 4 0
+4 1
+   1
+  1 1
+ 1 1 1
+1 1 1 0
+4 2
+   1
+  1 1
+ 1 1 1
+1 1 1 0
+4 1
+   0
+  2 2
+ 5 0 7
+0 5 7 0
+4 2
+   0
+  0 3
+ 1 0 4
+0 1 0 4
+4 3
+   0
+  3 3
+ 3 2 3
+0 3 0 3
+4 2
+   0
+  3 3
+ 3 2 3
+0 3 0 3
+6 1
+     1
+    1 2
+   1 1 0
+  6 7 6 8
+ 0 7 6 8 2
+6 6 7 2 2 0
+5 9
+    0
+   0 0
+  0 0 0
+ 0 0 0 0
+0 0 0 0 0
+5 3
+    3
+   3 2
+  4 3 2
+ 4 4 0 3
+3 3 3 0 3
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">6
+5
+1
+-10
+8
+-1
+0
+1
+-1
+5
+0
+5</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Japan+2002+Kanazawa">Japan 2002 Kanazawa</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1414">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1414">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1414">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

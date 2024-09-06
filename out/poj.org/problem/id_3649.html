@@ -1,0 +1,121 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3649 -- Typesetting</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3649"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3649&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Typesetting</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 621</td><td width="10px"></td><td><b>Accepted:</b> 254</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><div><p>Modern fonts are generally of two varieties: outline fonts, whose glyphs (the individual character shapes) are specified mathematically as a set of curves, and bitmap fonts, whose glyphs are specified as patterns of pixels. Fonts may also include embedded information such as kerning pairs (adjusting the spacing between certain pairs of glyphs, such as "AW", so that they appear spaced correctly), tracking hints (for managing inter-glyph spacing), antialiasing hints (smoothing of pixellated edges), and much more. To be sure, modern fonts are more than a simple collection of shapes, and displaying them properly is a common programming challenge.</p><p>For this problem we will concern ourselves with bitmapped fonts and a simple form of typesetting called glyph packing. Essentially, the idea is to pack the glyphs as tightly as possible while maintaining at least one horizontal pixel of separation between glyphs. For example, consider the glyphs shown to the left below for the Roman characters "P" and "J". The figure to the right shows them after glyph packing. Note that they are as close as possible without touching horizontally.</p><p><img alt="PJ" src="../images/3649_1.png"/></p>Here's another example. In this case, notice that the final glyph cannot be packed at all. <p><img alt="Fiji" src="../images/3649_2.png"/></p>After packing, pixels from distinct glyphs may be adjacent diagonally or vertically, but not horizontally. The following example shows that pixels may be adjacent diagonally. The "Love" test case in the example input section shows that they may be adjacent vertically. <p><img alt="two slashes" src="../images/3649_3.png"/></p>Glyph packing has the nice property that it's easy to build "fancy" glyphs into the font so that glyph packing creates special effects with no extra work. Look at the "Toy" example below. The same simple packing process has been applied to these glyphs as to the ones above, but the result is more dramatic: <p><img alt="Toy" src="../images/3649_4.png"/></p>Glyph packing has a few caveats, however, one of which we must concern ourselves with for this problem. Consider the example on the left below where a glyph for a hyphen is followed by a glyph for an underscore. Based on our one horizontal pixel of separation rule, how would this pack? Clearly something more is needed, and that something more is hinting within the glyphs themselves. Recall that in actual practice, fonts contain kerning pairs, tracking hints, etc. For our purposes, our hinting will be limited to "invisible" pixels that count as a pixel for the purpose of packing, but not for display. The center image below represents invisible pixels as open dots instead of closed dots. Now the two glyphs can be properly packed, resulting in the output shown on the right. <p><img alt="hidden pixels" src="../images/3649_5.png"/></p><p>Now for the formal definition of a proper packing: (1) Glyphs are packed as close as possible without allowing any pixels from different glyphs to be immediately horizontally adjacent; (2) Given two glyphs, they may not be packed in such a way that any pixel of the leftmost glyph at a given height ends up positioned to the right of any pixel at the same height in the rightmost glyph.</p><p>Condition (2) above is easily understood by visualizing two glyphs sitting side by side, separated by a small space. If you "squeeze" them together, condition (2) says that their pixels are not allowed to "pass through" one another. Consider the example to the left below. The center image is not the proper packing, because it violates condition (2) of the formal definition. The image on the right is the proper packing of these glyphs.</p><p><img alt="hooks" src="../images/3649_6.png"/></p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input for this problem is sets of glyphs to be packed. In a given test case, all glyphs are the same height, and an integer, <i>N</i>, on the first line of the test case specifies this height. The next <i>N</i> lines contain the glyphs to be packed. Empty pixels in a glyph are represented by a dot '.' character. Non-empty pixels are represented by a hash mark '#' for visible pixels, and a zero '0' for invisible pixels. Glyphs are separated by a single column of space characters. The input will always consist of more than one glyph, at least one of which will always contain at least one visible pixel. A glyph will always have at least one non-empty pixel in its leftmost and rightmost column, and every glyph will have at least one non-empty pixel at the same height as at least one other glyph in the input. The minimum dimension of a glyph is 1 × 1, the maximum dimension is 20 × 20, and the maximum number of glyphs that will appear in any test case is 20. Test cases continue until a value of zero is specified for <i>N</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, first output the number of that test case (starting with 1) on a line by itself. Then output the proper packing of the input glyphs, using the dot '.' character for empty pixels and for invisible pixels, and the hash mark '#' character for visible pixels. Omit leading and trailing empty columns (columns with no visible pixels) so that both the leftmost and rightmost output columns contain at least one visible pixel.</p></div><p class="pst">Sample Input</p><pre class="sio">8
+###. ...#
+#..# ...#
+#..# ...#
+###. ...#
+#... ...#
+#... ...#
+#... #..#
+#... ####
+8
+############# .... .............
+..#.......... .... .............
+..#.......... .##. .........#..#
+..#.......... #..# .........#..#
+..#.......... #..# .........#..#
+..#.......... .##. ..........###
+............. .... ............#
+............. .... ############.
+8
+############# .............
+..#.......... .............
+..#.......... .........#..#
+..#.......... .........#..#
+..#.......... .........#..#
+..#.......... ..........###
+............. ............#
+............. ############.
+5
+0..0 0..0
+0..0 0..0
+#### 0..0
+0..0 0..0
+0..0 ####
+5
+#.... .###.
+#.... #...#
+#...# #...#
+#...# ....#
+.###. ....#
+3
+### 0.0 ###
+#.# 0.0 #.#
+### 0.0 ###
+3
+0.0 ### 0.0
+0.0 #.# 0.0
+0.0 ### 0.0
+8
+#.... .... ..... ....
+#.... .... ..... ....
+#.... .##. #...# .##.
+#.... #..# .#.#. #..#
+#.... #..# .#.#. #..#
+#.... #..# .#.#. ###.
+#.... .##. ..#.. #...
+##### .... ..#.. .###
+0</pre><p class="pst">Sample Output</p><pre class="sio">1
+###..#
+#..#.#
+#..#.#
+###..#
+#....#
+#....#
+#.#..#
+#.####
+2
+#############
+..#..........
+..#..##..#..#
+..#.#..#.#..#
+..#.#..#.#..#
+..#..##...###
+............#
+############.
+3
+.....#############
+.......#..........
+.......#.#..#.....
+.......#.#..#.....
+.......#.#..#.....
+.......#..###.....
+............#.....
+############......
+4
+.........
+.........
+####.....
+.........
+.....####
+5
+#......###.
+#.....#...#
+#...#.#...#
+#...#.....#
+.###......#
+6
+###.....###
+#.#.....#.#
+###.....###
+7
+###
+#.#
+###
+8
+#..............
+#..............
+#..##.#...#.##.
+#.#..#.#.#.#..#
+#.#..#.#.#.#..#
+#.#..#.#.#.###.
+#..##...#..#...
+#####...#...###</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Mid-Central+USA+2007">Mid-Central USA 2007</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3649">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3649">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3649">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

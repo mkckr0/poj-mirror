@@ -1,0 +1,95 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3651 -- Slink</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3651"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3651&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Slink</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 112</td><td width="10px"></td><td><b>Accepted:</b> 27</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><div><p>Slitherlink is a puzzle published by Nikoli, the Japanese company that popularized Sudoku. Slitherlink puzzles are gaining momentum, and books of Slitherlink puzzles have started showing up around the world. The puzzles are simple to understand, but can be challenging to solve. The puzzle is simply a rectangular grid of dots that forms a collection of cells, every cell being either blank or containing an integer from zero to three. The challenge is to connect the dots with line segments to form a cycle (a connected path such that every vertex has precisely two incident edges), in such a way that every cell with a value has exactly the number of incident edges as the digit it contains. Cells with no value may have any number of incident edges. A valid Slitherlink puzzle always contains sufficient non-empty cells to guarantee a unique solution. Below is an example from the Nikoli web site of a Slitherlink puzzle and its solution.</p><p><img alt="slitherlink example" src="../images/3651_1.png"/></p><p>It was shown by Takayuki Yato at the University of Tokyo that the general Slitherlink problem is NP-complete. (If you are not familiar with this concept, informally it means there is no "efficient" algorithm to solve the problem.) With a slight modification and some simple heuristics, however, programmatic solutions are possible. Our new puzzle, which we will term Slink, differs from Slitherlink only in that the puzzle may not have empty cells. That is, every cell must specify the number of incident edges. Below is the Slitherlink puzzle above converted to Slink (the added numbers are shown in gray). Note that the solution does not change, only the information given in the puzzle itself.</p><p><img alt="slink example" src="../images/3651_2.png"/></p><p>The heuristics for solving Slink arise from the nature of the puzzle itself. For example, consider a cell containing a zero. There must be no incident edges, therefore all edges incident to all zeros can be immediately removed from consideration as part of the solution path. Consider a three next to a zero. Because all the edges incident to the zero will be eliminated, the common edge shared with the three is also eliminated. But that leaves only three edges around the three, and therefore those three edges must be part of the solution path. The following table specifies the heuristic rules that must be properly applied to solve a Slink puzzle. The "x" characters between vertices mark edges that are not part of the solution path, while line segments between vertices mark edges that form part of the solution. Grey elements are the pattern the rule is based on, black elements indicate the additional edges that should be included or excluded if the rule is matched. Note that the pictured examples are for demonstration purposes only and do <i>not</i> illustrate every possible arrangement of the stated rule!</p><table border="1" cellpadding="3"><tbody><tr><th>Examples</th><th>Rule Specification</th><td bgcolor="#cccccc">　</td><th>Examples</th><th>Rule Specification</th></tr><tr><td><img alt="case 1" src="../images/3651_r01.png"/></td><td>The easiest and most obvious of all the rules. Cells containing a zero have no incident edges, so all the edges around a zero should be removed from consideration as part of the solution path.</td><td bgcolor="#cccccc">　</td><td><img alt="case 2" src="../images/3651_r02-1.png"/><br/><br/><img alt="case 3" src="../images/3651_r02-3.png"/></td><td>If a cell contains the value <i>n</i> and only <i>n</i> incident edges remain (i.e. have not been eliminated), then the <i>n</i> remaining edges must be part of the solution path. Two examples of this occurring are shown here.</td></tr><tr><td><img alt="case 4" src="../images/3651_r03-2.png"/><br/><br/><img alt="case 5" src="../images/3651_r03-3.png"/></td><td>If a cell contains the value <i>n</i> and <i>n</i> incident edges have already been included in the path, the remaining edges can be eliminated. Two examples of this occurring are shown here.</td><td bgcolor="#cccccc">　</td><td><img alt="case 6" src="../images/3651_r04.png"/></td><td>If two 3's are adjacent to one another, the common edge between the cells as well as the outer edges of both cells are part of the solution path. One example of this arrangement occurring is shown here.</td></tr><tr><td><img alt="case 7" src="../images/3651_r05.png"/></td><td>If two 3's occur diagonally adjacent, the opposing corners as shown here must be part of the solution path. One example of such an arrangement is shown here.</td><td bgcolor="#cccccc">　</td><td><img alt="case 8" src="../images/3651_r06-a.png"/></td><td>If an edge enters a vertex for which only a single exit remains, that exit must be part of the solution path. One such example is shown here.</td></tr><tr><td><img alt="case 9" src="../images/3651_r07-b.png"/></td><td>If a vertex has two incident edges, the other edges can be eliminated from consideration as part of the solution path. One such example is shown here.</td><td bgcolor="#cccccc">　</td><td><img alt="case 10" src="../images/3651_r08.png"/></td><td>If any vertex has three incident edges excluded, the fourth incident edge can be excluded as well. One possible arrangement of this occurring is shown here.</td></tr><tr><td><img alt="case 11" src="../images/3651_r09.png"/></td><td>A 3 for which two of the exits are blocked as shown, such as in a corner of the puzzle, must include the two edges incident to the blocked vertex.</td><td bgcolor="#cccccc">　</td><td><img alt="case 12" src="../images/3651_r10.png"/></td><td>If the exits at one corner of a 2 are blocked, and one exit at an adjacent vertex around the 2 is also blocked, then the unblocked exit at that adjacent vertex must be part of the solution path. One example of this arrangement is shown here.</td></tr><tr><td><img alt="case 13" src="../images/3651_r11.png"/></td><td>A 1 for which the exit paths at one of its incident vertices are both blocked as shown, such as might occur in the corner of the puzzle, must also eliminate the other two edges incident to that vertex as shown.</td><td bgcolor="#cccccc">　</td><td><img alt="case 14" src="../images/3651_r12.png"/></td><td>If the solution path enters the corner of a 3, and the exit that goes away from the 3 at that same corner is blocked, then the two edges around the three incident to the opposite corner must be part of the solution path.</td></tr><tr><td><img alt="case 15" src="../images/3651_r15.png"/></td><td>If a 3 and 1 are diagonally adjacent, and the corner of the 3 furthest from the 1 has the exit segments blocked as shown, then the edges incident to the far corner of the 1 becomes blocked. The opposite is also true; if the far corner of the 1 had been blocked, then the exit segments at the far corner of the 3 would become blocked in the same manner.</td><td bgcolor="#cccccc">　</td><td><img alt="case 16" src="../images/3651_r16.png"/></td><td>If the solution path enters the corner of 2 and the path leading away from the 2 at the same corner is blocked, then if one of the paths leading away from the 2 at the diagonally opposite corner is also blocked, the other edge leading away from the 2 at that same corner must be part of the solution path. One example of this arrangement occurring is shown here.</td></tr><tr><td><img alt="case 17" src="../images/3651_r14.png"/></td><td>If the solution path enters the corner of a 1, and the exit that goes away from the 1 at that same corner is blocked, then the two edges around the three incident to the opposite corner must be eliminated from the solution path.</td><td bgcolor="#cccccc">　</td><td>　</td><td>　</td></tr></tbody></table></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input for this problem is a set of Slink puzzles to be solved. The first line of a Slink problem's input contains two integers, <i>r</i> and <i>c</i>, separated by a space, the number of rows and the number of columns in the puzzle. The next <i>r</i> rows of the input contain <i>c</i> integers, space delimited, valued from 0 to 3, which specify the content of the puzzle. The minimum dimension of a puzzle is 2 by 2 cells, and the maximum dimension is 20 by 20 cells. It is guaranteed that a unique solution to every input puzzle exists and can be determined with the above rules if a rule is always applied when it can be applied. A line with values of zero for <i>r</i> and <i>c</i> marks the end of the input.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output for this problem is a graphical representation of the Slink puzzle solution. The first data set is 1, the second data set is 2, etc. On a line by itself display the data set number, followed by the solution in exactly the format demonstrated below. Vertical edges are output as the vertical bar '|' character, horizontal edges are output as dash '-' characters, vertices where the path changes direction are output as plus signs '+', and cell numbers are always displayed with a blank to the left and to the right. Further, surround the entire output with a border made up of hash marks '#' such that the number in the upper left cell of the puzzle always occurs four positions to the right of the border and three position below the border, and the number in the lower right cell always occurs four positions to the left of the border and three positions above the border.<br/></p></div><p class="pst">Sample Input</p><pre class="sio">8 8
+1 0 1 1 2 2 1 3
+3 3 3 3 2 3 3 2
+2 2 0 1 1 2 2 0
+2 3 1 1 0 1 2 2
+2 1 2 3 1 1 0 2
+1 2 2 2 2 3 2 1
+3 2 1 3 1 1 3 2
+1 0 0 2 3 2 3 2
+6 6
+0 0 1 1 0 0
+0 2 2 2 2 0
+1 2 0 0 2 1
+1 2 0 0 2 1
+0 2 2 2 2 0
+0 0 1 1 0 0
+2 2
+2 2
+2 2
+3 5
+3 3 3 2 3
+1 2 1 3 2
+3 3 2 2 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+#####################################
+#                                   #
+#                 +---------------+ #
+#   1   0   1   1 | 2   2   1   3 | #
+# +---+   +---+   |   +---+   +---+ #
+# | 3 | 3 | 3 | 3 | 2 | 3 | 3 | 2   #
+# |   +---+   +---+   |   +---+     #
+# | 2   2   0   1   1 | 2   2   0   #
+# +-------+           +-------+     #
+#   2   3 | 1   1   0   1   2 | 2   #
+# +-------+   +---+           +---+ #
+# | 2   1   2 | 3 | 1   1   0   2 | #
+# |       +---+   |   +---+       | #
+# | 1   2 | 2   2 | 2 | 3 | 2   1 | #
+# |   +---+   +---+   |   +---+   | #
+# | 3 | 2   1 | 3   1 | 1   3 | 2 | #
+# +---+       +---+   |   +---+   | #
+#   1   0   0   2 | 3 | 2 | 3   2 | #
+#                 +---+   +-------+ #
+#                                   #
+#####################################
+2
+#############################
+#                           #
+#                           #
+#   0   0   1   1   0   0   #
+#         +-------+         #
+#   0   2 | 2   2 | 2   0   #
+#     +---+       +---+     #
+#   1 | 2   0   0   2 | 1   #
+#     |               |     #
+#   1 | 2   0   0   2 | 1   #
+#     +---+       +---+     #
+#   0   2 | 2   2 | 2   0   #
+#         +-------+         #
+#   0   0   1   1   0   0   #
+#                           #
+#                           #
+#############################
+3
+#############
+#           #
+# +-------+ #
+# | 2   2 | #
+# |       | #
+# | 2   2 | #
+# +-------+ #
+#           #
+#############
+4
+#########################
+#                       #
+# +---+   +---+   +---+ #
+# | 3 | 3 | 3 | 2 | 3 | #
+# |   +---+   |   |   | #
+# | 1   2   1 | 3 | 2 | #
+# |   +---+   +---+   | #
+# | 3 | 3 | 2   2   2 | #
+# +---+   +-----------+ #
+#                       #
+#########################
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Mid-Central+USA+2007">Mid-Central USA 2007</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3651">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3651">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3651">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

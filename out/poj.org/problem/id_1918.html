@@ -1,0 +1,51 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1918 -- Ranking List</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1918"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1918&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Ranking List</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 30000K</td></tr><tr><td><b>Total Submissions:</b> 1785</td><td width="10px"></td><td><b>Accepted:</b> 522</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><b>Background</b> <br/>We knew something would be missing. We have just noticed that we do not have a tool helping us with the ranking list for this programming contest, and if we tried to create it by hand, you would probably end up waiting for the results until Sunday. So please help us out here, will you?<br/><b>Problem</b> <br/>Your task is to write a program that determines the ranking list for a programming contest. You are given a list of the participating teams and a log file describing all the solutions submitted by the teams.<br/>The scoring of this programming contest is based on the following set of rules:<br/><ol><li>The Contest Judges are solely responsible for determining the correctness of submitted runs. The winners of the Contest are determined by the Contest Judges and the Contest Director. The Contest Judges are empowered to adjust for or adjudicate unforeseen events and conditions.<br/></li><li>Teams will be ranked by the total number of correct solutions. For the purpose of awards, or in determining qualifier(s) for the ACM Contest, teams who solve the same number of problems are ranked by least total time. If this results in a draw situation the least number of attempts for each solved problems are taken into account. First the number of submissions for the problem with the most attempts are compared.<br/></li><li>The total time is the sum of the time consumed for each problem solved. The time consumed for a solved problem is the time elapsed from the beginning of the contest to the submittal of the accepted run plus 20 penalty minutes for every rejected run for that problem regardless of submittal time. There is no time consumed for a problem that is not solved.</li></ol> <br/>We are sure that you know all this. However, we think that the provisions of the second rule for resolving a draw situation are somewhat obscure, so that we do not want your program to implement such a procedure.Instead, if there is a draw situation of two or more teams with the same total number of correct solutions and the same total time, assign the same rank to these teams and list them in alphabetical order. Their relative ranking will be determined by the contest director, based on the number of attempts for each solved problems or the earliest problem solved.<br/>As we want the rank r of a team to indicate that r-1 teams did better, we need to adjust the numbers in a draw situation. If, for example, the two best teams' numbers of solved problems and total times coincide,they would both get rank 1, while the next team would be assigned rank 3. In this example, nobody would be assigned rank 2 by your program.<br/>We also have an addition to the third rule: There will be no penalty for incorrect solutions submitted after a correct solution was accepted from the same team.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.<br/>For each scenario, you find the number n, 1 &lt;= n &lt;= 20, of teams in the first line and the (unique) names of the teams in the n following lines. A team name is a single word of length at most 8 containing letters and digits only, and for your convenience the teams are listed in alphabetical order. The next line contains the number k of problems and the number m of solutions that were submitted (1 &lt;= k &lt; 10, 0 &lt;= m &lt;= 2000). Each of the following m lines describes one such solution, in the format "problem time correctness team", where 1 &lt;= problem &lt;= k is the number of the problem,0 &lt;= time &lt; 300 is the number of minutes elapsed since the contest was started, correctness is either "Yes" or "No" and team is the name of the team that submitted the solution. You can assume that the lines in the log file are sorted by time.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario print a ranking list containing every team that participated in the contest. The format is "rank. team solved time", where rank is the rank, team the name of the team, solved the number of correct solutions, and time the total time. In addition to the single blanks separating these four fields, make the table look nice by using a field width of 2 for the rank, 8 for the team's name, 1 for the number of problems solved and 4 for the total time (name left-adjusted, numbers right-adjusted, see sample output). Each scenario ends with a blank line.</div><p class="pst">Sample Input</p><pre class="sio">2
+10
+Team1
+Team2
+Team3
+Team4
+Team5
+Team6
+Team7
+Team8
+Team9
+slowTeam
+8 14
+1 18 Yes Team4
+1 57 Yes Team2
+1 87 Yes Team3
+1 101 Yes Team1
+2 103 Yes Team5
+2 120 Yes Team6
+6 141 Yes Team7
+1 147 No Team1
+7 156 Yes Team2
+5 167 Yes Team8
+2 167 Yes Team9
+5 170 No Team4
+5 175 Yes Team4
+1 234 No slowTeam
+1
+Team1
+8 0</pre><p class="pst">Sample Output</p><pre class="sio"> 1. Team2    2  213
+ 1. Team4    2  213
+ 3. Team3    1   87
+ 4. Team1    1  101
+ 5. Team5    1  103
+ 6. Team6    1  120
+ 7. Team7    1  141
+ 8. Team8    1  167
+ 8. Team9    1  167
+10. slowTeam 0    0
+
+ 1. Team1    0    0
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=TUD+Programming+Contest+2001">TUD Programming Contest 2001</a>, Darmstadt, Germany</div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1918">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1918">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1918">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

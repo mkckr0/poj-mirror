@@ -1,0 +1,106 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3442 -- Baseball</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3442"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3442&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Baseball</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 5000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 344</td><td width="10px"></td><td><b>Accepted:</b> 117</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Baseball is a game full of statistics. But what good are these statistics? Maybe they can be used to predict the outcome of a game.<br/> <br/>A baseball game consists of 9 innings. If the game is tied after 9 innings, one additional inning is played at a time until the game is no longer tied at the end of the additional inning. Each inning is divided into two halves, in which one team "attacks" and the other team "defends". The visiting team attacks in the first half, while the home team attacks in the second half. If the home team is leading at the start of the second half of the 9th inning, the game ends because the winner has already been determined.<br/> <br/>Each team submits a "batting order" at the beginning of the game indicating the order in which its 9 players will bat during the attack half of the inning. In each half of an inning, the players in the attacking team bat according to the batting order. The first batter in the first inning is the first one in the batting order. Each subsequent batter is the next batter in the batting order. If the previous batter is the last player in the batting order, the next batter is the first player in the batting order again. In each subsequent inning, the first player to bat is the player following the last player who has batted in the batting order.<br/> <br/>When a player is successful at bat (a hit), the player at bat advances to the first base, and any other players already on base advance by one base (in real games a player may advance by multiple bases, but we will not consider this case in this problem). A player must advance to first base, second base, third base, and finally the home base in order to score a run. When a player reaches the home base, he is returned to the bench to wait for his next opportunity to bat. The half of an inning continues indefinitely until 3 attacking players are unsuccessful at bat (each unsuccessful batter is an "out"). When this happens, any players left on first, second, or third base return to the bench and do not score. The team that scores the most runs at the end of the game wins.<br/> <br/>In certain situations, a player may "sacrifice" himself in order to advance the players already on base. If a sacrifice is successful, the player at bat is out but each player already on base is advanced by one base. A player advancing to the home base this way scores a run, unless the sacrificed batter is the third out of the inning. In the latter case, the half of the inning is over and no run is scored. If a sacrifice is unsuccessful, the batter is out and none of the players advances. A batter will attempt to sacrifice whenever there is a player on second base with zero out, or when there is a player on third base with at most one out.<br/> <br/>One of the most commonly cited statistics for players is the "hit percentage" (between 0 and 1) for each player, indicating the proportion of time the player is successful at bat. Similarly, the "sacrifice percentage" of a player is the proportion of time the player is successful at a sacrifice. In this problem, you will be given the hit percentage and the sacrifice percentage of each of the 9 players in a team as well as a batting order. You will be asked to simulate a baseball game. Random numbers are required in a simulation, and you will use the following random number generator:<br/> <br/>x(n+1) = (x(n) * 25173 + 13849) % 65536<br/> <br/>where x(n) is the previous random number and x(n+1) is the next random number. The calculations above should be performed using 32-bit integers. You should start with the "seed" x(0) = 1; the first random number generated by your program is x(1). Each time the simulation needs to determine if a hit or a sacrifice is successful, it should generate the next random number. A hit (or a sacrifice) is successful if<br/> <br/>random_number / 65536 &lt;= hit (or sacrifice) percentage<br/> <br/>The division in this formula is floating-point division. Do not reset the random number generator (i.e. resetting the seed to 1) except at the beginning of each game.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of games. The first line of the input file specifies the number of games to follow. Each game contains the batting order of the visiting team followed by the batting order of the home team. The batting order of each team starts with a line specifying the team name (at most 15 upper and lower case letters). The next 9 lines specify the 9 players, listed in the order they bat. Each of these lines contains the player's name (at most 15 upper and lower case characters), a space, then a floating-point number (to 3 decimal places) specifying his hit percentage, a space, and finally his sacrifice percentage (to 3 decimal places). You may assume that all hit percentages are between .200 and .400, and all sacrifice percentages are between .300 and .750. You may assume that no game will last more than 200 innings.</div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each game, print the game number as well as the visiting and home team names in the first line, as follows:</p><pre>Game &lt;x&gt;: &lt;visiting&gt; vs. &lt;home&gt;</pre>This is followed by a blank line.<p>Next print the players who score hits and runs, separately, for each inning in the order they occur in the game. Use the format as follows:</p><pre>Inning 1:<br/>Hits:<br/>  &lt;player1&gt; &lt;team&gt;<br/>  &lt;player2&gt; &lt;team&gt;<br/>Runs:<br/>  &lt;player3&gt; &lt;team&gt;<br/>  &lt;player4&gt; &lt;team&gt;</pre>Indent the list of players by two spaces. Print the player name and the team name right-justified in a field width of 15 (in addition to the indentation before the player's name and one space separation between the player's name and team name). If no one scores a hit or a run, print the single line<pre>  none  </pre>(indented by two spaces) in the appropriate section instead of a list of players. Print a blank line after the output for each inning.<p>At the end of the game, print a summary on the number of runs and hits scored for each team, starting with the visiting team:</p><pre>End of Game:<br/>  &lt;visiting&gt; &lt;x&gt; runs, &lt;x&gt; hits<br/>  &lt;home&gt; &lt;x&gt; runs, &lt;x&gt; hits<br/></pre>The summary should be indented by two spaces. Print the team name right-justified in a field width of 15 (in addition to the indentation).<p>Separate the output of consecutive games by a line containing 60 '=' signs.</p></div><p class="pst">Sample Input</p><pre class="sio">1
+Rangers
+Young .213 .523
+Kinsler .207 .602
+Sosa .254 .300
+Laird .220 .432
+Byrd .206 .749
+Wilkerson .236 .508
+Catalanotto .272 .483
+Teixeira .297 .573
+Saltalamacchia .243 .632
+BlueJays
+Wells .378 .502
+Hill .276 .544
+Overbay .372 .694
+McDonald .373 .618
+Adams .320 .690
+Rios .300 .450
+Johnson .379 .559
+Stairs .302 .621
+Zaun .346 .515</pre><p class="pst">Sample Output</p><pre class="sio">Game 1: Rangers vs. BlueJays
+
+Inning 1:
+Hits:
+             Hill        BlueJays
+          Overbay        BlueJays
+            Adams        BlueJays
+
+Runs:
+  none
+
+Inning 2:
+Hits:
+  none
+
+Runs:
+  none
+
+Inning 3:
+Hits:
+      Catalanotto         Rangers
+            Wells        BlueJays
+             Hill        BlueJays
+            Adams        BlueJays
+
+Runs:
+            Wells        BlueJays
+
+Inning 4:
+Hits:
+          Kinsler         Rangers
+
+Runs:
+  none
+
+Inning 5:
+Hits:
+      Catalanotto         Rangers
+
+Runs:
+  none
+
+Inning 6:
+Hits:
+             Sosa         Rangers
+            Laird         Rangers
+             Rios        BlueJays
+
+Runs:
+  none
+
+Inning 7:
+Hits:
+        Wilkerson         Rangers
+         Teixeira         Rangers
+           Stairs        BlueJays
+
+Runs:
+  none
+
+Inning 8:
+Hits:
+  none
+
+Runs:
+  none
+
+Inning 9:
+Hits:
+  none
+
+Runs:
+  none
+
+End of Game:
+          Rangers 0 runs, 7 hits
+         BlueJays 1 runs, 8 hits</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Rocky+Mountain+2007">Rocky Mountain 2007</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3442">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3442">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3442">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

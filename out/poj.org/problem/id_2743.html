@@ -1,0 +1,41 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2743 -- Mobile Computing</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2743"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2743&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Mobile Computing</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 2000MS</td><td width="10px"></td><td colspan="3"><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 831</td><td width="10px"></td><td><b>Accepted:</b> 255</td><td width="10px"></td><td style="font-weight:bold; color:red;">Special Judge</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">There is a mysterious planet called Yaen, whose space is 2-dimensional. There are many beautiful stones on the planet, and the Yaen people love to collect them. They bring the stones back home and make nice mobile arts of them to decorate their 2-dimensional living rooms.<br/>In their 2-dimensional world, a mobile is defined recursively as follows:<br/><img align="right" src="../images/2743_1.jpg"/><ul><li>a stone hung by a string, or<br/></li><li>a rod of length 1 with two sub-mobiles at both ends; the rod is hung by a string at the center of gravity of sub-mobiles. When the weights of the sub-mobiles are n and m, and their distances from the center of gravity are a and b respectively, the equation n * a = m * b holds.</li></ul> <br/>For example, if you got three stones with weights 1, 1, and 2, here are some possible mobiles and their widths:<br/><img src="../images/2743_2.jpg"/> <br/>Given the weights of stones and the width of the room, your task is to design the widest possible mobile satisfying both of the following conditions.<br/><ul><li>It uses all the stones.<br/></li><li>Its width is less than the width of the room.</li></ul> <br/>You should ignore the widths of stones.<br/><img align="right" src="../images/2743_3.jpg"/>In some cases two sub-mobiles hung from both ends of a rod might overlap (see the figure on the right). Such mobiles are acceptable. The width of the example is (1/3) + 1 + (1/4).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input gives the number of datasets. Then the specified number of datasets follow. A dataset has the following format.<br/>r<br/>s<br/>w1 ...<br/>w<sub>s</sub> <br/>r is a decimal fraction representing the width of the room, which satisfies 0 &lt; r &lt; 10. s is the number of the stones. You may assume 1 &lt;= s &lt;= 6. wi is the weight of the i-th stone, which is an integer. You may assume 1 &lt;= wi &lt;= 1000.<br/>You can assume that no mobiles whose widths are between r - 0.00001 and r + 0.00001 can be made of given stones.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset in the input, one line containing a decimal fraction should be output. The decimal fraction should give the width of the widest possible mobile as defined above. An output line should not contain extra characters such as spaces.<br/>In case there is no mobile which satisfies the requirement, answer -1 instead. <br/>The answer should not have an error greater than 0.00000001. You may output any number of digits after the decimal point, provided that the above accuracy condition is satisfied.</div><p class="pst">Sample Input</p><pre class="sio">5
+1.3
+3
+1
+2
+1
+1.4
+3
+1
+2
+1
+2.0
+3
+1
+2
+1
+1.59
+4
+2
+1
+1
+3
+1.7143
+4
+1
+2
+3
+5</pre><p class="pst">Sample Output</p><pre class="sio">-1
+1.3333333333333335
+1.6666666666666667
+1.5833333333333335
+1.7142857142857142</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Japan+2005">Japan 2005</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2743">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2743">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2743">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

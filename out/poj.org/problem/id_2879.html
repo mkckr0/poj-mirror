@@ -1,0 +1,48 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2879 -- Vice City</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2879"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2879&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Vice City</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 290</td><td width="10px"></td><td><b>Accepted:</b> 48</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><i>"Tommy, there will be a programming contest here in Vice City. One of the coaches has stolen a copy of the problem set. The chief judge wants it back. Take out the coach guy at his hotel and return the problems back. The address is taped under the phone. Do it now!"</i> <br/> <br/>Not a tough job for you, Tommy Vercetti! Getting the mission at the pay phone, you must head off the coach at WK Charriot Hotel before he leaves. You have to get there fast! Get there very fast indeed! Unfortunately, the vehicle you start with may not run fast enough. But there are some fixed locations in Vice City at which you can find certain vehicles, like Diaz’s Mansion where you can find an Infernus. This way, you may change your vehicle on your way to hotel several times. For example, in the first sample input, you ride from PayPhone to CarShowRoom on a PCJ600 and drive the rest of the path in a HotRingRacer. Don’t forget that it takes one minute each time you change your vehicle.<br/> <br/>You are given the names of these locations in the city and the distances between each pair. At each location you can find a certain vehicle anytime you get there. Knowing the top speed of each vehicle, you want to find out the minimum time in which you can reach the hotel. For the sake of simplicity, assume that you always drive at top speed of your vehicle.<br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer t (1 &lt;= t &lt;= 20) which is the number of test cases in the input. Each test case has three parts. The first part consists of m lines (1 &lt;= m &lt;= 100) of the form vehicle speed where vehicle is the unique name of a vehicle and speed is a positive integer giving the top speed of the vehicle measured in Km/h. <br/> <br/>The next part of the test case identifies the locations in the city and is separated from the first part by exactly one blank line. It consists of n lines (2 &lt;= n &lt;= 500) of the form location vehicle where location is the unique name of a location in the city and vehicle is the name of the vehicle available in that location. The list of locations always includes the starting location PayPhone and the destination WKCharriot.<br/> <br/>The third part of the test case identifies the roads between locations and is separated from the previous part by exactly one blank line. It consists of several lines of the form loc1 loc2 distance indicating there is a (two-way) road of length distance between the locations loc1 and loc2. Distances are expressed in kilometers and are positive integers. The test case is terminated by a line containing a single asterisk character (*).<br/> <br/>All names (for vehicles and locations) are strings of at most 100 letters and digits with no space characters and are considered case sensitive. Items in an input line are separated by one or more space characters. Also, there may be arbitrary leading or trailing blanks except in empty lines used as separators.<br/> <br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, there is one line in the output containing the minimum time (in minutes) you need to travel from PayPhone to WKCharriot, or the word UNREACHABLE if the destination is unreachable from the starting point. Print the results as numbers with exactly three decimal digits after decimal point. That is, the possible decimal digits after the third one should be ignored, and if there are less than three digits after decimal point, zero digits should be printed for missing digits.<br/></div><p class="pst">Sample Input</p><pre class="sio">2
+Infernus 280
+Cheetah 285
+PCJ600 250
+Stallion 180
+HotRingRacer 300
+
+Mansion Infernus
+CarShowRoom HotRingRacer
+VicePort Cheetah
+NorthPointMall Infernus
+PayPhone PCJ600
+WKCharriot Stallion
+
+PayPhone CarShowRoom 10
+PayPhone VicePort 15
+VicePort WKCharriot 20
+CarShowRoom Mansion 15
+Mansion WKCharriot 15
+Mansion NorthPointMall 5
+NorthPointMall WKCharriot 5
+*
+Caddy 80
+MrWhoopie 60
+Stretch 120
+CubanHermes 160
+Voodoo 170
+
+CherryPoppy MrWhoopie
+Mansion Stretch
+PayPhone CubanHermes
+LittleHaiti Voodoo
+WKCharriot Caddy
+
+PayPhone CherryPoppy 10
+CherryPoppy LittleHaiti 15
+Mansion WKCharriot 20
+*</pre><p class="pst">Sample Output</p><pre class="sio">8.400
+UNREACHABLE</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Tehran+2004">Tehran 2004</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2879">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2879">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2879">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

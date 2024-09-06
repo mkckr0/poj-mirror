@@ -1,0 +1,53 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3943 -- Digits on the Floor</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3943"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3943&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Digits on the Floor</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 92</td><td width="10px"></td><td><b>Accepted:</b> 37</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Taro attempts to tell digits to Hanako by putting straight bars on the floor. Taro wants to express each digit by making one of the forms shown in Figure 2.<br/>Since Taro may not have bars of desired lengths, Taro cannot always make forms exactly as shown in Figure 2. Fortunately, Hanako can recognize a form as a digit if the connection relation between bars in the form is kept. Neither the lengths of bars nor the directions of forms affect Hanako’s perception as long as the connection relation remains the same. For example, Hanako can recognize all the awkward forms in Figure 3 as digits. On the other hand, Hanako cannot recognize the forms in Figure 4 as digits. For clarity, touching bars are slightly separated in Figures 2, 3 and 4. Actually, touching bars overlap exactly at one single point.<br/> <br/><center><img src="../images/3943_1.png"/></center> <br/> <br/>In the forms, when a bar touches another, the touching point is an end of at least one of them. That is, bars never cross. In addition, the angle of such two bars is always a right angle.<br/>To enable Taro to represent forms with his limited set of bars, positions and lengths of bars can be changed as far as the connection relations are kept. Also, forms can be rotated.<br/>Keeping the connection relations means the following.<br/> <br/><center><img src="../images/3943_2.png"/></center> <br/> <br/><p style="padding-left:30px"> <br/>Separated bars are not made to touch.<br/>Touching bars are not made separate.<br/>When one end of a bar touches another bar, that end still touches the same bar. When it touches a midpoint of the other bar, it remains to touch a midpoint of the same bar on the same side.<br/>The angle of touching two bars is kept to be the same right angle (90 degrees and -90 degrees are considered different, and forms for 2 and 5 are kept distinguished).<br/></p> <br/> <br/>Your task is to find how many times each digit appears on the floor.<br/>The forms of some digits always contain the forms of other digits. For example, a form for 9 always contains four forms for 1, one form for 4, and two overlapping forms for 7. In this problem, ignore the forms contained in another form and count only the digit of the “largest” form composed of all mutually connecting bars. If there is one form for 9, it should be interpreted as one appearance of 9 and no appearance of 1, 4, or 7.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of datasets. Each dataset is formatted as follows.<br/><p style="padding-left:30px"> <br/>n<br/>x<sub>1a</sub> y<sub>1a</sub> x<sub>1b</sub> y<sub>1b</sub> <br/>x<sub>2a</sub> y<sub>2a</sub> x<sub>2b</sub> y<sub>2b</sub> <br/>.<br/>.<br/>.<br/>x<sub>na</sub> y<sub>na</sub> x<sub>nb</sub> x<sub>nb</sub> <br/></p> <br/>In the first line, n represents the number of bars in the dataset. For the rest of the lines, one line represents one bar. Four integers xa, ya, xb, yb, delimited by single spaces, are given in each line. xa and ya are the x- and y-coordinates of one end of the bar, respectively. xb and yb are those of the other end. The coordinate system is as shown in Figure 5. You can assume 1 ≤ n ≤ 1000 and 0 ≤ xa, ya, xb, yb ≤ 1000.<br/>The end of the input is indicated by a line containing one zero.<br/> <br/><center><img src="../images/3943_3.png"/></center> <br/> <br/>You can also assume the following conditions.<br/><p style="padding-left:30px"> <br/>More than two bars do not overlap at one point.<br/>Every bar is used as a part of a digit. Non-digit forms do not exist on the floor.<br/>A bar that makes up one digit does not touch nor cross any bar that makes up another digit.<br/>There is no bar whose length is zero.<br/></p></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, output a single line containing ten integers delimited by single spaces. These integers represent how many times 0, 1, 2, ... , and 9 appear on the floor in this order. Output lines must not contain other characters.<br/></div><p class="pst">Sample Input</p><pre class="sio">9
+60 140 200 300
+300 105 330 135
+330 135 250 215
+240 205 250 215
+298 167 285 154
+30 40 30 90
+30 90 150 90
+150 90 150 20
+30 40 150 40
+8
+320 20 300 60
+320 20 380 50
+380 50 240 330
+10 50 40 20
+10 50 110 150
+110 150 180 80
+40 20 37 17
+37 17 27 27
+20
+72 222 132 182
+204 154 204 54
+510 410 520 370
+404 54 204 54
+530 450 410 450
+204 68 404 68
+80 110 120 30
+130 160 180 60
+520 370 320 320
+310 360 320 320
+120 30 180 60
+60 100 80 110
+404 154 204 154
+80 60 60 100
+430 550 590 550
+510 410 310 360
+430 450 430 550
+404 54 404 154
+232 202 142 262
+142 262 102 202
+0</pre><p class="pst">Sample Output</p><pre class="sio">0 1 0 1 0 0 0 0 0 1
+0 0 0 0 0 1 0 1 0 0
+1 0 1 0 2 0 0 0 1 0
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Asia+Regional+Contest">Asia Regional Contest</a>, Aizu, 2008</div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3943">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3943">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3943">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

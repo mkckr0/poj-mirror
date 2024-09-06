@@ -1,0 +1,71 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3522 -- Slim Span</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3522"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3522&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Slim Span</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 5000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 11692</td><td width="10px"></td><td><b>Accepted:</b> 6151</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><p>Given an undirected weighted graph <i>G</i>, you should find one of spanning trees specified as follows.</p><p>The graph <i>G</i> is an ordered pair (<i>V</i>, <i>E</i>), where <i>V</i> is a set of vertices {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, …, <i>v<sub>n</sub></i>} and <i>E</i> is a set of undirected edges {<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, …, <i>e<sub>m</sub></i>}. Each edge <i>e</i> ∈ <i>E</i> has its weight <i>w</i>(<i>e</i>).</p><p>A spanning tree <i>T</i> is a tree (a connected subgraph without cycles) which connects all the n vertices with <i>n</i> − 1 edges. The slimness of a spanning tree <i>T</i> is defined as the difference between the largest weight and the smallest weight among the <i>n</i> − 1 edges of <i>T</i>.</p><div align="center"><img src="../images/3522_1.png"/><br/>Figure 5: A graph <i>G</i> and the weights of the edges</div><p>For example, a graph <i>G</i> in Figure 5(a) has four vertices {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, <i>v</i><sub>3</sub>, <i>v</i><sub>4</sub>} and five undirected edges {<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, <i>e</i><sub>3</sub>, <i>e</i><sub>4</sub>, <i>e</i><sub>5</sub>}. The weights of the edges are <i>w</i>(<i>e</i><sub>1</sub>) = 3, <i>w</i>(<i>e</i><sub>2</sub>) = 5, <i>w</i>(<i>e</i><sub>3</sub>) = 6, <i>w</i>(<i>e</i><sub>4</sub>) = 6, <i>w</i>(<i>e</i><sub>5</sub>) = 7 as shown in Figure 5(b).</p><div align="center"><img src="../images/3522_2.png"/><br/>Figure 6: Examples of the spanning trees of <i>G</i></div><p>There are several spanning trees for <i>G</i>. Four of them are depicted in Figure 6(a)~(d). The spanning tree <i>T<sub>a</sub></i> in Figure 6(a) has three edges whose weights are 3, 6 and 7. The largest weight is 7 and the smallest weight is 3 so that the slimness of the tree <i>T<sub>a</sub></i> is 4. The slimnesses of spanning trees <i>T<sub>b</sub></i>, <i>T<sub>c</sub></i> and <i>T<sub>d</sub></i> shown in Figure 6(b), (c) and (d) are 3, 2 and 1, respectively. You can easily see the slimness of any other spanning tree is greater than or equal to 1, thus the spanning tree Td in Figure 6(d) is one of the slimmest spanning trees whose slimness is 1.</p><p>Your job is to write a program that computes the smallest slimness.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple datasets, followed by a line containing two zeros separated by a space. Each dataset has the following format.</p><div style="padding-left: 2em;"><table border="0"><tr><td><i>n</i></td><td><i>m</i></td><td></td></tr><tr><td><i>a</i><sub>1</sub></td><td><i>b</i><sub>1</sub></td><td><i>w</i><sub>1</sub></td></tr><tr><td></td><td align="center">⋮</td><td></td></tr><tr><td><i>a<sub>m</sub></i></td><td><i>b<sub>m</sub></i></td><td><i>w<sub>m</sub></i></td></tr></table></div><p>Every input item in a dataset is a non-negative integer. Items in a line are separated by a space. n is the number of the vertices and m the number of the edges. You can assume 2 ≤ <i>n</i> ≤ 100 and 0 ≤ <i>m</i> ≤ <i>n</i>(<i>n</i> − 1)/2. <i>a<sub>k</sub></i> and <i>b<sub>k</sub></i> (<i>k</i> = 1, …, <i>m</i>) are positive integers less than or equal to <i>n</i>, which represent the two vertices <i>v<sub>a<sub>k</sub></sub></i> and <i>v<sub>b<sub>k</sub></sub></i> connected by the <i>k</i>th edge <i>e<sub>k</sub></i>. <i>w<sub>k</sub></i> is a positive integer less than or equal to 10000, which indicates the weight of <i>e<sub>k</sub></i>. You can assume that the graph <i>G</i> = (<i>V</i>, <i>E</i>) is simple, that is, there are no self-loops (that connect the same vertex) nor parallel edges (that are two or more edges whose both ends are the same two vertices).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset, if the graph has spanning trees, the smallest slimness among them should be printed. Otherwise, −1 should be printed. An output should not contain extra characters.</p></div><p class="pst">Sample Input</p><pre class="sio">4 5
+1 2 3
+1 3 5
+1 4 6
+2 4 6
+3 4 7
+4 6
+1 2 10
+1 3 100
+1 4 90
+2 3 20
+2 4 80
+3 4 40
+2 1
+1 2 1
+3 0
+3 1
+1 2 1
+3 3
+1 2 2
+2 3 5
+1 3 6
+5 10
+1 2 110
+1 3 120
+1 4 130
+1 5 120
+2 3 110
+2 4 120
+2 5 130
+3 4 120
+3 5 110
+4 5 120
+5 10
+1 2 9384
+1 3 887
+1 4 2778
+1 5 6916
+2 3 7794
+2 4 8336
+2 5 5387
+3 4 493
+3 5 6650
+4 5 1422
+5 8
+1 2 1
+2 3 100
+3 4 100
+4 5 100
+1 5 50
+2 5 50
+3 5 50
+4 1 150
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+20
+0
+-1
+-1
+1
+0
+1686
+50</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Japan+2007">Japan 2007</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3522">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3522">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3522">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

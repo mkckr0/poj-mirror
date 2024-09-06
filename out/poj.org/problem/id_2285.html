@@ -1,0 +1,47 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2285 -- The Floor Bricks</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2285"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2285&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">The Floor Bricks</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 10000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 495</td><td width="10px"></td><td><b>Accepted:</b> 217</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Robert decided to decorate his new room with a cool pattern on the floor, composed with colorful floor bricks. After several days' work, he finally felt satisfied with the pattern he created with the odd shaped bricks. Soon, he found a problem. As the border of the pattern is not a perfect rectangle, the floor is not filled with bricks completely. However, since the shapes of the bricks are quite odd, it is not an easy work to fill the floor with these bricks completely. (Although a brick with a unit size is provided, this kind of brick is quite expensive usually. Fig.1 shows an example of a set of bricks) As Robert was very proud of his brick pattern, he refuses to modify even one brick in his pattern in order to satisfy the need of filling the floor completely. Instead, he asked you to find solutions for him to fill the rest part of the floor completely with the given bricks so that the Gils needed to buy these bricks are minimized. Of course, the bricks can not overlap each other to fill the floor. Please note that the bricks can be rotated, but cannot be flipped over. In addition, you may assume that all kinds of bricks can be contained within a 3×3 square box. <br/><center><img src="../images/2285_1.jpg"/></center> <br/>As the pattern of bricks covers most areas of the floor, the uncovered part of the floor is actually located at the bottom border of the rectangular shaped floor. Therefore, an uncovered part like the one in Fig.2 can be described with a series of integers, which represents the number of square blocks missed in each column, starting from the left. Thus, the shape in Fig.2 can be described with 11 integers: 2 2 1 2 3 5 2 3 3 4 1. In addition, you may assume that these integers are no larger than 5. Fig.3 shows a solution to fill the floor with the brick set in Fig.1 that costs minimal Gils. <br/><center><img src="../images/2285_2.jpg"/></center> <br/><center><img src="../images/2285_3.jpg"/></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of at most 20 test cases. The first line of each test case contains an integer n ( 1&lt;=n&lt;=1000), which is the width of the floor. The second line contains n integers, separated by single spaces. These integers describe the shape of the uncovered floor as mentioned above. The third line contains an integer m ( 1&lt;=m&lt;=100), which is the number of bricks available. After this is the detailed description of the m bricks. <br/> <br/>Each brick description consists of 4 lines. The first line is a positive integer, which is the price of that brick in Gils. After this line, there are three lines, each consisting of three characters, which describe the shape of the brick. A dot character represents a space in the shape and a sharp character # represents a square block in the shape. You can be sure that the blocks are always connected to form the brick. <br/> <br/>There is a line containing a zero after the last test case, which signifies the end of the input and should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line `Need at least g Gil(s).', where g is the minimal Gils needed to fill the floor with the given bricks. If the floor cannot be filled with the given bricks, output `Impossible.' instead. Do not output blank lines between cases. <br/></div><p class="pst">Sample Input</p><pre class="sio">11
+1 4 3 3 2 5 3 2 1 2 2
+4
+2
+#..
+#..
+##.
+3
+.#.
+.##
+.#.
+5
+...
+#..
+##.
+9
+...
+.#.
+...
+1
+1
+1
+1
+..#
+...
+...
+1
+1
+1
+1
+.##
+...
+...
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Need at least 28 Gil(s).
+Need at least 1 Gil(s).
+Impossible.
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Shanghai+2004">Shanghai 2004</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2285">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2285">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2285">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

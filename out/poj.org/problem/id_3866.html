@@ -1,0 +1,78 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3866 -- Exclusive Access 2</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3866"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3866&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Exclusive Access 2</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 5000MS</td><td width="10px"></td><td colspan="3"><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 180</td><td width="10px"></td><td><b>Accepted:</b> 78</td><td width="10px"></td><td style="font-weight:bold; color:red;">Special Judge</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Having studied mutual exclusion protocols in the previous year's competition you are now facing a more challenging problem. You have a big enterprise system with a number concurrently running processes. The system has several resources - databases, message queues, etc. Each concurrent process works with two resources at a time. For example, one process might copy a job from a particular database into the message queue, the other process might take a job from the message queue, perform the job, and then put the result into some other message queue, etc.<br/>All resources are protected from concurrent access by mutual exclusion protocols also known as locks. For example, to access a particular database process acquires the lock for this database, then performs its work, then releases the lock. No two processes can hold the same lock at the same time (that is the property of mutual exclusion). Thus, the process that tries to acquire a lock waits if that lock is taken by some other process.<br/>The main loop of the process that works with resources P and Q looks like this:<br/> <br/><pre><br/>	loop forever<br/>		DoSomeNonCriticalWork()<br/>		P.lock()<br/>		Q.lock()<br/>		WorkWithResourcesPandQ()<br/>		Q.unlock()<br/>		P.unlock()<br/>	end loop</pre> <br/>The order in which locks for resources P and Q are taken is important. Consider a case where process c had acquired lock P with P.lock() and is waiting for lock Q in Q.lock(). It means that lock Q is taken by some other process d. If the process d is working (not waiting), then we say that there is a wait chain of length 1. If d had acquired lock Q and is waiting for another lock R, which is acquired by a working process e, then we say that there is a wait chain of length 2, etc. If any process in this wait chain waits for lock P that is already taken by process c, then we say that the wait chain has infinite length and the system deadlocks.<br/>For this problem, we are interested only in alternating wait chains where processes hold their first locks and wait for the second ones. Formally:<br/><p style="padding-left: 30px"> <br/>Alternating wait chain of length n (n &gt;= 0) is an alternating sequence of resources Ri (0 &lt;= i &lt;= n + 1) and distinct processes ci (0 &lt;= i &lt;= n): R0 c0 R1 c1 ... Rn cn Rn+1, where process ci acquires locks for resources Ri and Ri+1 in this order. Alternating wait chain is a deadlock when R0 = Rn+1.<br/></p> <br/>You are given a set of resources each process works with. Your task is to decide the order in which each process has to acquire its resource locks, so that the system never deadlocks and the maximum length of any possible alternating wait chain is minimized.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer n (1 &lt;= n &lt;= 100) - the number of processes.<br/>The following n lines describe resources that each process needs. Each resource is designated with an uppercase English letter from L to Z, so there are at most 15 resources. Each line describing process contains two different resources separated by a space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">On first line of the output file write a singe integer number m - the minimally possible length of the maximal alternating wait chain.<br/>Then write n lines - one line per process. On each line write two resources in the order they should be taken by the corresponding process to ensure this minimal length of the maximal alternating wait chain. Separate resources on a line by a space. If there are multiple satisfying orderings, then write any of them. The order of the processes in the output should correspond to their order in the input.</div><p class="pst">Sample Input</p><pre class="sio">Sample input #1:
+2
+P Q
+R S
+
+Sample input #2:
+6
+P Q
+Q R
+R S
+S T
+T U
+U P
+
+Sample input #3:
+4
+P Q
+P Q
+P Q
+P Q
+
+Sample input #4:
+3
+P Q
+Q R
+R P
+
+Sample input #5:
+6
+P Q
+Q S
+S R
+R P
+P S
+R Q</pre><p class="pst">Sample Output</p><pre class="sio">Sample output #1:
+0
+P Q
+R S
+
+Sample output #2:
+0
+P Q
+R Q
+R S
+T S
+T U
+P U
+
+Sample output #3:
+0
+P Q
+P Q
+P Q
+P Q
+
+Sample output #4:
+1
+P Q
+Q R
+P R
+
+Sample output #5:
+2
+P Q
+Q S
+R S
+P R
+P S
+R Q</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Northeastern+Europe+2009">Northeastern Europe 2009</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3866">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3866">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3866">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

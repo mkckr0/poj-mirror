@@ -1,0 +1,54 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2580 -- The Door/Key Problem</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2580"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2580&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">The Door/Key Problem</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 716</td><td width="10px"></td><td><b>Accepted:</b> 201</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Thibodeaux has managed to once again lock himself inside his own house (this happens all too often). Boudreaux, being the good buddy that he is, has taken the precaution of scattering keys to the locked rooms throughout Thibodeaux's house. It is up to you to determine if Thibodeaux can make it to his bedroom (room 0).</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. <br/> <br/>A single data set has 4 components: <br/><ol><li>Start line - A single line: <br/>         START M N<br/> <br/>where M indicates the starting room, and N indicates the number of rooms in the house (1 &lt;= N &lt;= 20). <br/></li><li>Room list - A series of N lines. Each line lists, for a single room, every door that leads to a room of higher number and the keys necessary to open the door from either side. Rooms will be represented by numbers and each key will be represented by a single capital letter (A - Z). For example, if room 3 had doors to rooms 1, 5, and 7, and the door to room 1 took an A key, the door to room 5 took an F key, and the door to room 7 took an X key and a P key, the line for room 1 would read: <br/>	 3A<br/> <br/>and the line for room 3 would read: <br/>	 5F 7PX<br/> <br/>The first line in the list represents room 0. The second line represents room 1, and so on until the last line, which represents room N - 1. It is possible for lines to be empty (in particular, the last line will always be empty since it is the highest numbered room). On each line, the adjacent rooms are always listed in ascending order. It is possible for rooms to be connected by multiple doors and for doors to require multiple keys; required keys for a door will be listed in alphabetical order. <br/></li><li>Key list - A series of N lines. Each line lists, for a single room, the keys, in alphabetical order, that are in that room. <br/></li><li>End line - A single line: <br/>         END</li></ol> <br/>After the last data set, there will be a single line: <br/>   ENDOFINPUT<br/> <br/>Notes: <br/>There will be no more than 100 doors in any data set. <br/>No room will have more than 20 doors. <br/>Some doors may not require keys. <br/>In any data set, all keys are unique and can be used multiple times. <br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. If it is possible for Thibodeaux to reach his bedroom (room 0), print a line: <br/> <br/>   YES<br/> <br/>Otherwise, print a line: <br/>   NO<br/> <br/></div><p class="pst">Sample Input</p><pre class="sio">START 1 2
+1A
+
+
+A
+END
+START 1 5
+1F
+2A 2B 3CD 3E
+
+
+
+
+B
+C D
+F
+A E
+END
+START 1 10
+9I
+2A
+3B
+4C
+5D
+6E
+7F
+8G
+9H
+
+
+A
+B
+C
+D
+E
+F
+G
+H
+X
+END
+ENDOFINPUT
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+YES
+NO
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=South+Central+USA+2003">South Central USA 2003</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2580">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2580">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2580">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

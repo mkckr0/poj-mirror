@@ -1,0 +1,55 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1888 -- Crossword Answers</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1888"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1888&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Crossword Answers</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 30000K</td></tr><tr><td><b>Total Submissions:</b> 1501</td><td width="10px"></td><td><b>Accepted:</b> 624</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">A crossword puzzle consists of a rectangular grid of black and white squares and two lists of definitions (or descriptions). <br/> <br/>One list of definitions is for ``words" to be written left to right across white squares in the rows and the other list is for words to be written down white squares in the columns. (A word is a sequence of alphabetic characters.) <br/> <br/>To solve a crossword puzzle, one writes the words corresponding to the definitions on the white squares of the grid. <br/> <br/>The definitions correspond to the rectangular grid by means of sequential integers on ``eligible" white squares. White squares with black squares immediately to the left or above them are ``eligible." White squares with no squares either immediately to the left or above are also ``eligible." No other squares are numbered. All of the squares on the first row are numbered. <br/> <br/>The numbering starts with 1 and continues consecutively across white squares of the first row, then across the eligible white squares of the second row, then across the eligible white squares of the third row and so on across all of the rest of the rows of the puzzle. The picture below illustrates a rectangular crossword puzzle grid with appropriate numbering.<br/><center><img src="../images/1888_1.jpg"/></center> <br/>An "across" word for a definition is written on a sequence of white squares in a row starting on a numbered square that does not follow another white square in the same row. The sequence of white squares for that word goes across the row of the numbered square, ending immediately before the next black square in the row or in the rightmost square of the row. <br/> <br/>A "down" word for a definition is written on a sequence of white squares in a column starting on a numbered square that does not follow another white square in the same column. The sequence of white squares for that word goes down the column of the numbered square, ending immediately before the next black square in the column or in the bottom square of the column. Every white square in a correctly solved puzzle contains a letter. <br/> <br/>You must write a program that takes several solved crossword puzzles as input and outputs the lists of across and down words which constitute the solutions. <br/> <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">Each puzzle solution in the input starts with a line containing two integers r and c (1 &lt;= r &lt;= 10 and 1 &lt;= c &lt;= 10), where r (the first number) is the number of rows in the puzzle and c (the second number) is the number of columns. The r rows of input which follow each contain c characters (excluding the end-of-line) which describe the solution. Each of those c characters is an alphabetic character which is part of a word or the character "*", which indicates a black square. The end of input is indicated by a line consisting of the single number 0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output for each puzzle consists of an identifier for the puzzle (puzzle #1, puzzle #2, etc.) and the list of across words followed by the list of down words. Words in each list must be output one-per-line in increasing order of the number of their corresponding definitions. The heading for the list of across words is "Across". The heading for the list of down words is "Down". In the case where the lists are empty (all squares in the grid are black), the Across and Down headings should still appear. </div><p class="pst">Sample Input</p><pre class="sio">2 2
+AT
+*O
+6 7
+AIM*DEN
+*ME*ONE
+UPON*TO
+SO*ERIN
+*SA*OR*
+IES*DEA
+0</pre><p class="pst">Sample Output</p><pre class="sio">puzzle #1:
+Across
+  1.AT
+  3.O
+Down
+  1.A
+  2.TO
+
+puzzle #2:
+Across
+  1.AIM
+  4.DEN
+  7.ME
+  8.ONE
+  9.UPON
+ 11.TO
+ 12.SO
+ 13.ERIN
+ 15.SA
+ 17.OR
+ 18.IES
+ 19.DEA
+Down
+  1.A
+  2.IMPOSE
+  3.MEO
+  4.DO
+  5.ENTIRE
+  6.NEON
+  9.US
+ 10.NE
+ 14.ROD
+ 16.AS
+ 18.I
+ 20.A
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=World+Finals+1994">World Finals 1994</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1888">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1888">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1888">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

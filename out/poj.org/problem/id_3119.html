@@ -1,0 +1,59 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3119 -- Friends or Enemies?</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3119"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3119&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Friends or Enemies?</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 460</td><td width="10px"></td><td><b>Accepted:</b> 202</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><p>A determined army on a certain border decided to enumerate the coordinates in its patrol in a way to make it difficult for the enemy to know what positions they are referring to in the case that the radio signal used for communication is intercepted. The enumeration process chosen was the following: first it is decided where the axes <code>x</code> and <code>y</code> are; then, a linear equation that describes the position of the border relative to the the axes (yes, it is a straight line) is defined; finally, all points on the Cartesian plane that is not part of the border are enumerated, the number <code>0</code> being attributed to the coordinate <code>(0, 0)</code> and starting from there numbers being attributed to integral coordinates following a clockwise spiral, always skipping points that fall on the border (see Figure 1). If the point <code>(0, 0)</code> falls on the border, the number <code>0</code> is attributed to the first point that is not part of the border following the specified order.</p><div align="center"><img src="../images/3119_1.png"/></div><p align="center">Figure 1: Enumeration of points of integral coordinates</p><p>In fact the enemy does not have to know either what position the army is referring to or the system used to enumerate the points. Such a project, complicated the life of the army, once that it is difficult to determine whether two points are on the same side of the border or on opposite sides. That is where they need your help.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several test cases. The first line of the input contains an integer <i>N</i> (1 ≤ <i>N</i> ≤ 100) which represents the quantity of test cases. <i>N</i> test cases follow. The first line of each test case contains two integers <i>a</i> and <i>b</i> (−5 ≤ <i>a</i> ≤ 5 and −10 ≤ <i>b</i> ≤ 10) which describe the equation of the border: <i>y</i> = <i>ax</i> + <i>b</i>. The second line of each test case contains an integer <i>K</i>, indicating the number of queries that follow it (1 ≤ <i>K</i> ≤ 1000). Each one of the following <i>K</i> lines describes a query, composed by two integers <i>M</i> and <i>N</i> representing the enumerated coordinates of two points (0 ≤ <i>M</i>, <i>N</i> ≤ 65535).</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case in the input your program should produce <i>K</i> + 1 lines. The first line should contain the identification of the test case in the form <code>Caso X</code>, where <code>X</code> should be substituted by the case number (starting from <code>1</code>). The <i>K</i> following lines should contain the results of the <i>K</i> queries made in the corresponding case in the input, in the form:</p><blockquote><p><code>Mesmo lado da fronteira</code> (<code>The same side of the border</code>)</p><p>or</p><p><code>Lados opostos da fronteira</code> (<code>Opposite sides of the border</code>)</p></blockquote></div><p class="pst">Sample Input</p><pre class="sio">2
+1 2
+10
+26 25
+25 11
+24 9
+23 28
+25 9
+25 1
+25 0
+9 1
+23 12
+26 17
+1 2
+12
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+10 11
+11 12</pre><p class="pst">Sample Output</p><pre class="sio">Caso 1
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Caso 2
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=South+America+2006">South America 2006</a>, Brazil Subregion</div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3119">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3119">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3119">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

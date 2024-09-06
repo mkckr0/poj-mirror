@@ -1,0 +1,49 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3123 -- Ticket to Ride</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3123"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3123&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Ticket to Ride</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 2000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 1037</td><td width="10px"></td><td><b>Accepted:</b> 440</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><img align="right" src="../images/3123_1.jpg"/>Ticket to Ride is a board game for up to 5 players. The goal of the game is to set up train lines (and to thwart the opponents' attempts at setting up their train lines). At the beginning of play, each player is assigned four train lines. A player may choose to discard as many of these four assignments as she likes. Each assignment has a score, corresponding to its difficulty (so, typically, a train line between e.g. Stockholm and Tokyo would be worth more than a train line between e.g. Stockholm and Utrecht). At the end of the game, each player gets points for the assignments that they have successfully completed, and penalty points for the assignments that they have failed to complete.<br/> <br/>An assignment consists of a pair of cities that are to be connected by a series of shorter railway routes. A route can be claimed (for a certain cost associated with the route), but things are complicated by the fact that there is only a limited number of routes, and once a player claims a route, none of the other players can claim it. A player has successfully set up a train line between two cities if there is a path between the two cities using only routes that have been claimed by this player. For simplicity, we will ignore all additional aspects of the game (including the actual process of claiming routes and additional ways to score points).<br/> <br/>For instance, if your assignment is to connect Stockholm and Amsterdam in the Figure above, you would probably want to claim the routes between Stockholm and Copenhagen, and between Copenhagen and Amsterdam. But if another player manages to claim the route between Copenhagen and Stockholm before you, your train line would have to use some other routes, e.g. by going to Copenhagen via Oslo.<br/> <br/>In this problem, we will consider the rather bold strategy of trying to complete all four assignments (typically, this will be quite hard). As a preliminary assessment of the difficulty of achieving this, we would like to calculate the minimum cost of setting up all four lines assuming that none of the other players interfere with our plans. Your job is to write a program to determine this minimum cost.<br/> <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several (at most 20) games to be analyzed. Each game starts with two integers 1 ≤ n ≤ 30, 0 ≤ m ≤ 1 000, giving the number of cities and railway routes in the map, respectively. Then follow n lines, giving the names of the n cities. City names are at most 20 characters long and consist solely of lower case letters ('a'-'z').<br/> <br/>After this follow m lines, each containing the names of two different cities and an integer 1 ≤ c ≤ 10 000, indicating that there is a railway route with cost c between the two cities. Note that there may be several railway routes between the same pair of cities. You may assume that it is always possible to set up a train line from any city to any other city. Finally, there will be four lines, each containing the names of two cities, giving the four train line assignments.<br/> <br/>The input is terminated by a case where n = m = 0. This case should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each game, output a single line containing a single integer, the minimum possible cost to set up all four train lines.</div><p class="pst">Sample Input</p><pre class="sio">10 15
+stockholm
+amsterdam
+london
+berlin
+copenhagen
+oslo
+helsinki
+dublin
+reykjavik
+brussels
+oslo stockholm 415
+stockholm helsinki 396
+oslo london 1153
+oslo copenhagen 485
+stockholm copenhagen 522
+copenhagen berlin 354
+copenhagen amsterdam 622
+helsinki berlin 1107
+london amsterdam 356
+berlin amsterdam 575
+london dublin 463
+reykjavik dublin 1498
+reykjavik oslo 1748
+london brussels 318
+brussels amsterdam 173
+stockholm amsterdam
+oslo london
+reykjavik dublin
+brussels helsinki
+2 1
+first
+second
+first second 10
+first first
+first first
+second first
+first first
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">3907
+10</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Northwestern+Europe+2006">Northwestern Europe 2006</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3123">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3123">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3123">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

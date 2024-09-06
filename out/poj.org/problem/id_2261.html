@@ -1,0 +1,58 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2261 -- France '98</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2261"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2261&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">France '98</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 1325</td><td width="10px"></td><td><b>Accepted:</b> 793</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Today the first round of the Soccer World Championship in France is coming to an end. 16 countries are remaining now, among which the winner is determined by the following tournament: <br/><pre><br/> 1 Brazil -----+	<br/>   	       +-- ? --+<br/> 2 Chile ------+       |<br/>		       +-- ? --+<br/> 3 Nigeria ----+       |       |<br/>	       +-- ? --+       |<br/> 4 Denmark ----+	       |<br/>	                       +-- ? --+<br/> 5 Holland ----+	       |       |<br/>	       +-- ? --+       |       |<br/> 6 Yugoslavia -+       |       |       |<br/>		       +-- ? --+       |<br/> 7 Argentina --+       |	       |<br/>	       +-- ? --+	       |<br/> 8 England ----+		       |<br/>				       +-- World Champion<br/> 9 Italy ------+		       |<br/>	       +-- ? --+	       |<br/>10 Norway -----+       |               |<br/>		       +-- ? --+       |<br/>11 France -----+       |       |       |<br/>	       +-- ? --+       |       |<br/>12 Paraguay ---+	       |       |<br/>			       +-- ? --+<br/>13 Germany ----+	       |<br/>	       +-- ? --+       |<br/>14 Mexico -----+       |       |<br/>		       +-- ? --+<br/>15 Romania ----+       |<br/>	       +-- ? --+<br/>16 Croatia ----+</pre> <br/>For each possible match A vs. B between these 16 nations, you are given the probability that team A wins against B. This (together with the tournament mode displayed above) is sufficient to compute the probability that a given nation wins the World Cup. For example, if Germany wins against Mexico with 80%, Romania against Croatia with 60%, Germany against Romania with 70% and Germany against Croatia with 90%, then the probability that Germany reaches the semi-finals is 80% * (70% * 60% + 90% * 40%) = 62.4%. <br/>Your task is to write a program that computes the chances of the 16 nations to become the World Champion '98. <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain just one test case.<br/>The first 16 lines of the input file give the names of the 16 countries, from top to bottom according to the picture given above. <br/>Next, there will follow a 16 x 16 integer matrix P where element pijgives the probability in percent that country #i defeats country #j in a direct match. Country #i means the i-th country from top to bottom given in the list of countries. In the picture above Brazil is #1 and Germany is #13, so p1,13=55 would mean that in a match between Brazil and Germany, Brazil wins with a probability of 55%. <br/>Note that matches may not end with a draw, i.e. pij + pji = 100 for all i,j.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output 16 lines of the form "XXXXXXXXXX p=Y.YY%", where XXXXXXXXXX is the country's name, left-justified in a field of 10 characters, and Y.YY is their chance in percent to win the cup, written to two decimal places. Use the same order of countries like in the input file. </div><p class="pst">Sample Input</p><pre class="sio">Brazil
+Chile
+Nigeria
+Denmark
+Holland
+Yugoslavia
+Argentina
+England
+Italy
+Norway
+France
+Paraguay
+Germany
+Mexico
+Romania
+Croatia
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+35 50 35 45 40 35 35 50 30 40 25 40 25 40 35 35 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+40 55 40 50 45 40 40 55 35 45 30 45 30 45 40 40 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+35 50 35 45 40 35 35 50 30 40 25 40 25 40 35 35 
+55 70 55 65 60 55 55 70 50 60 45 60 45 60 55 55 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+60 75 60 70 65 60 60 75 55 65 50 65 50 65 60 60 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+60 75 60 70 65 60 60 75 55 65 50 65 50 65 60 60 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+</pre><p class="pst">Sample Output</p><pre class="sio">Brazil     p=8.54%
+Chile      p=1.60%
+Nigeria    p=8.06%
+Denmark    p=2.79%
+Holland    p=4.51%
+Yugoslavia p=7.50%
+Argentina  p=8.38%
+England    p=1.56%
+Italy      p=9.05%
+Norway     p=3.23%
+France     p=13.72%
+Paraguay   p=3.09%
+Germany    p=13.79%
+Mexico     p=3.11%
+Romania    p=5.53%
+Croatia    p=5.53%
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Ulm+Local+1998">Ulm Local 1998</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2261">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2261">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2261">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

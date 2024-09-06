@@ -1,0 +1,54 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>3574 -- Japanese Writing</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D3574"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=3574&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Japanese Writing</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 5000MS</td><td width="10px"></td><td colspan="3"><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 244</td><td width="10px"></td><td><b>Accepted:</b> 120</td><td width="10px"></td><td style="font-weight:bold; color:red;">Special Judge</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><p>Michael had visited ACM ICPC World Finals 2007 in Tokyo, Japan and became fascinated with Japanese writing. He decided to study hieroglyphs, but in order to check his knowledge he needs a piece of software that can verify correctness of his writing. This program takes a description of a correct shape of the hieroglyph, several Michael’s attempts to write it, and judges each attempt as correct or incorrect.</p><p>In this problem hieroglyphs are represented as a collection of strokes, each stroke being a straight line on a Cartesian plane. The order of strokes is irrelevant for the hieroglyph shape, but the direction of each stroke is relevant. There are eight relevant directions: straight right, upper-right, straight up, upper-left, straight left, lower-left, straight down, and lower-right.</p><p>Two writings are considered to represent the same shape if one-to-one correspondence can be established between the strokes and all the endpoints of the strokes, so that direction of strokes and relative positions of pairs of points are preserved. Preservation of relative positions is important for any pair of points, even if they are not connected with a stroke. However, relative positions are important only with respect to eight relevant directions described above.</p><p>For example, here is a hieroglyph similar to Latin letter A with 5 endpoints connected with 3 strokes and several other correct writings of the same shape:</p><div align="center"><img src="../images/3573_1.gif"/></div><p>Note, that intersections of strokes are not relevant. Here are several incorrect writings of the same shape:</p><div align="center"><img src="../images/3573_2.gif"/></div><p>These writings are not correct for the following reasons:</p><ul><li>Writing 5 has an extra point, so one-to-one correspondence between endpoints cannot be established.</li><li>In writing 6 point <i>d</i> is straight up from point <i>a</i> but it should be to the upper-right of it.</li><li>In writing 7 stroke <i>d</i> − <i>e</i> goes in the wrong direction.</li><li>In writing 8 point <i>c</i> is lower-right from point <i>a</i> but it should be straight to the right of it.</li><li>Writing 9 has an extra <i>a</i> − <i>d</i> stroke, so one-to-one correspondence between strokes cannot be established.</li></ul></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains a single integer <i>n</i> (2 ≤ <i>n</i> ≤ 20) — the number of writings in the input file. It is followed by descriptions of <i>n</i> writings.</p><p>Each writing starts with a line with a single integer number <i>m<sub>i</sub></i> (1 ≤ <i>m<sub>i</sub></i> ≤ 100) — the number of strokes in <i>i</i>-th writing. It is followed by <i>m<sub>i</sub></i> lines that describe strokes for <i>i</i>-th writing. Each stroke is represented by a line with four integer numbers <i>x<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>y<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>x<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i>, and <i>y<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i> (−1000 ≤ <i>x<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>y<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>x<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>y<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i> ≤ 1000) — coordinates of endpoints. <i>x<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>y<sup>a</sup><sub style="margin-left: -1ex;">ij</sub></i> are coordinates of the beginning of <i>j</i>-th stroke and <i>x<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i>, <i>y<sup>b</sup><sub style="margin-left: -1ex;">ij</sub></i> are coordinates of the end of <i>j</i>-th stroke. The beginning and the end of the stroke are distinct points. Any two endpoints are connected by at most one stroke.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Compare the shapes of writings from 2nd to <i>n</i>-th with the shape of the first writing and write to the output file <i>n</i> − 1 lines with the result of each comparison of a single line. Write <tt>CORRECT</tt> if the corresponding writing represents the same shape as the first one or <tt>INCORRECT</tt> otherwise.</p></div><p class="pst">Sample Input</p><pre class="sio">9
+3
+0 0 10 20
+10 20 20 0
+5 10 15 10
+3
+0 0 10 20
+10 20 20 0
+2 10 13 10
+3
+0 0 10 15
+10 15 20 0
+5 10 15 10
+3
+8 10 12 10
+0 0 10 20
+10 20 14 0
+3
+0 0 8 20
+12 20 20 0
+5 10 15 10
+3
+0 0 10 20
+10 20 20 0
+0 10 15 10
+3
+0 0 10 20
+10 20 20 0
+15 10 5 10
+3
+2 4 10 20
+10 20 20 0
+5 10 15 10
+4
+0 0 10 20
+0 0 5 10
+10 20 20 0
+5 10 15 10</pre><p class="pst">Sample Output</p><pre class="sio">CORRECT
+CORRECT
+CORRECT
+INCORRECT
+INCORRECT
+INCORRECT
+INCORRECT
+INCORRECT</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Northeastern+Europe+2007">Northeastern Europe 2007</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=3574">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=3574">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=3574">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

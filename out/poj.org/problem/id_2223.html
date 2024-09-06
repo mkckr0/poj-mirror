@@ -1,0 +1,61 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>2223 -- Get Out 'Da Way!</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D2223"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=2223&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">Get Out 'Da Way!</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr><tr><td><b>Total Submissions:</b> 233</td><td width="10px"></td><td><b>Accepted:</b> 59</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Boudreaux and Thibodaux have just seen the Matrix, and are arguing whether or not it would actually be possible to dodge bullets if you moved fast enough. Boudreaux is used to hunting nutria with buckshot, and maintains that most bullet spreads should make it impossible to dodge all the bullets. Thibodaux is still doing kung-fu in his head, and is sure that if you could move fast enough it would be possible to dodge the bullets. Boudreaux is getting fed up, and is about ready to prove his point with some empirical testing. Your job is to come up with a way to prove or disprove this hypothesis for different scenarios using computer simulations, which are much safer than the methods that Boudreaux has in mind. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 20 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. <br/> <br/>A single data set has 5 components: <br/><ol><li>Start line - A single line, "START N", where N is a positive integer in the range 1 &lt;= N &lt;= 10 which indicates the number of bullets fired at the target. <br/></li><li>Target Velocity - A single line representing the velocity of the target. <br/></li><li>Bullet Velocity List - A non-empty set of up to 10 lines. Each line will contain the velocity of a single bullet. <br/></li><li>Target - A nonempty series of up to 30 lines. Each line will consist of up to 30 characters (not counting the end-of-line). Each non-whitespace character represents a piece of the target that can be hit by a bullet. The target will not contain numbers, asterisks, or commas, but any other characters may be used. The target grid is assumed rectangular for the purposes of determining its center, and its dimensions are that of the longest row/column (this will not exceed 30 blocks in either direction). Each block of the target grid is 10cm X 10cm. <br/></li><li>End line - A single line, "END" </li></ol> <br/><b><u>Note: </u></b> <br/><ul><li>The target will be the first line after the last bullet velocity line with a first character that is neither a number nor a minus sign ('-') followed by a number. <br/></li><li>The bullets are assumed to have been fired at the same instant, from a point exactly 10 meters due South of the center of target, and at a height equal to half the height of the target. <br/></li><li>Each bullet (and the target) velocity will be listed as a three-component velocity vector. The velocities are in meters per second, and of the format: <velocity north="">, <velocity east="">, <velocity up=""> with no spaces. Velocities may be negative values. </velocity></velocity></velocity></li></ul> <br/> <br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">Find out if the target got out 'da way. A hit occurs when any bullet passes through a grid square with mass in it. For the sake of simplicity, the target can be assumed to be two dimensional, and the bullets volumeless. Also, Boudreaux and Thibideaux don't even know what precision means, they just make sure to calculate to at least four decimal places. (In other words, don't worry about precision edge detection. Just keep the math simple and use very precise numbers to minimize error. You'll find hits in the correct places.) <br/> <br/>For each data set, there will be exactly one output set, and there will be exactly one blank line separating output sets. <br/> <br/>An output set will take one of two forms: <br/><ul><li>If no bullets hit mass-containing parts of the target, your output will be, "Got out da way!" <br/></li><li>Otherwise (if at least one hit occurred), your output will be the Target, with all hit blocks replaced with asterisks ('*'). </li></ul> <br/></div><p class="pst">Sample Input</p><pre class="sio">START 3
+-10,-2,1
+300,14.5,-20
+350,-80,0
+400,28.75,26
+     @@@@      n
+     #^^#     oU
+      ##     o
+  ooooooooooo
+  o oooooo
+  o  oooo
+ o   DDDD
+oo   DDDD
+     D  D
+     D  D
+    TT  TT
+    TT  TT
+  &lt;TTT  TTT&gt;
+END
+START 2
+-10,-2,1
+300,14.5,-20
+350,-80,0
+     @@@@      n
+     #^^#     oU
+      ##     o
+  ooooooooooo
+  o oooooo
+  o  oooo
+ o   DDDD
+oo   DDDD
+     D  D
+     D  D
+    TT  TT
+    TT  TT
+  &lt;TTT  TTT&gt;
+END</pre><p class="pst">Sample Output</p><pre class="sio">     @@@@      *
+     #^^#     oU
+      ##     o
+  ooooooooooo
+  o oooooo
+  o  oooo
+ o   DDDD
+oo   DDDD
+     D  D
+     D  D
+    TT  TT
+    TT  TT
+  &lt;TTT  TTT&gt;
+
+Got Out Da Way!
+</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=South+Central+USA+2001">South Central USA 2001</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=2223">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=2223">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=2223">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>

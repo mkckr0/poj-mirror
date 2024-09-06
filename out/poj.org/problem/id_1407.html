@@ -1,0 +1,61 @@
+<html><head><meta content="no-cache" http-equiv="Pragma"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="en-US" http-equiv="Content-Language"/><title>1407 -- e-Market</title><link href="../poj.css" rel="stylesheet" type="text/css"/><link href="../poj.ico" rel="shortcut icon"/><link href="../poj.gif" rel="icon" type="image/gif"/><script language="javascript" src="../poj.js"></script></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><table border="1" bordercolor="#ffffff" style="BORDER-COLLAPSE: collapse" width="100%"><tbody><tr><td align="CENTER" colspan="5"><table cellpadding="0" class="h1"><tr><td align="left" width="25%"><img border="0" height="100" src="../images/logo1.jpg"/></td><td bgcolor="#EAEFFD" colspan="3"><table class="h2"><tr><td><img border="0" height="90" src="../images/logo0.gif" width="450"/></td><td width="95"><img border="0" height="95" src="../images/logo3.gif" width="95"/></td></tr></table></td></tr></table></td></tr><tr align="CENTER" bgcolor="#6589d1" valign="top"><th class="h">Online Judge</th><th class="h">Problem Set</th><th class="h">Authors</th><th class="h">Online Contests</th><th class="h">User</th></tr><tr align="CENTER" bgcolor="#f1f1fd" valign="top"><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><a href="http://poj.org/bbs">Web Board</a><br/><a href="../index.html">Home Page</a><br/><a href="../page/id_1000.html" target="_blank">F.A.Qs</a><br/><a href="http://poj.org/chart">Statistical Charts</a></td><td class="h" onmouseout="scbg(this, 0)" onmouseover="scbg(this, 1)"><form onsubmit="event.preventDefault(); let pid = (new FormData(event.target)).get('pid'); window.location=`../problem/id_${pid}.html`"><a href="../problemlist.html">Problems</a><br/><a href="http://poj.org/submit">Submit Problem</a><br/><a href="http://poj.org/status">Online Status</a><br/><font color="blue">Prob.ID:</font><input name="pid" size="6" type="text"/><input name="pb1" type="Submit" value="Go"/></form></td><td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="searchuser" method="GET"><a href="http://poj.org/register">Register</a><br/><a href="http://poj.org/modifyuser">Update your info</a><br/><a href="http://poj.org/userlist">Authors ranklist</a><br/><input name="key" size="10" type="text"/><input name="B1" type="Submit" value="Search"/></form></td>
+<td class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><font color="#1a5cc8">Current Contest</font><br/><a href="http://poj.org/pastcontests">Past Contests</a><br/><a href="http://poj.org/contests">Scheduled Contests</a><br/><a href="http://poj.org/challenge.html" target="_blank"><font color="red">Award Contest</font></a></td><td align="left" class="h" onmouseout="scbg(this,0)" onmouseover="scbg(this,1)"><form action="login" method="POST"><table><tr><td>User ID:</td><td><input name="user_id1" size="10" style="font-family:monospace" type="text"/></td></tr><tr><td>Password:</td><td><input name="password1" size="10" style="font-family:monospace" type="password"/></td></tr></table><input name="B1" type="Submit" value="login"/>  <a href="http://poj.org/register" target="_parent">Register</a><input name="url" type="hidden" value="%2Fproblem%3Fid%3D1407"/></form></td></tr></tbody></table><table background="../images/table_back.jpg" border="0" width="100%"><tr><td>
+<div style="position: absolute; right: 10px;">Language:<select onchange="window.location.href='problem?id=1407&amp;lang='+this.value+'&amp;change=true'" size="1"><option selected="" value="default">Default</option></select></div><div class="ptt" lang="en-US">e-Market</div>
+<div class="plm"><table align="center"><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 10000K</td></tr><tr><td><b>Total Submissions:</b> 483</td><td width="10px"></td><td><b>Accepted:</b> 155</td></tr></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">The city of Hakodate recently established a commodity exchange market. To participate in the market, each dealer transmits through the Internet an order consisting of his or her name, the type of the order (buy or sell), the name of the commodity, and the quoted price.<br/> <br/> <br/> <br/>In this market a deal can be made only if the price of a sell order is lower than or equal to the price of a buy price. The price of the deal is the mean of the prices of the buy and sell orders, where the mean price is rounded downward to the nearest integer. To exclude dishonest deals, no deal is made between a pair of sell and buy orders from the same dealer. The system of the market maintains the list of orders for which a deal has not been made and processes a new order in the following manner.<br/><ul> <br/><li>       For a new sell order, a deal is made with the buy order with the highest price in the list satisfying the conditions. If there is more than one buy order with the same price, the deal is made with the earliest of them.<br/> <br/></li><li>       For a new buy order, a deal is made with the sell order with the lowest price in the list satisfying the conditions. If there is more than one sell order with the same price, the deal is made with the earliest of them.<br/></li></ul> <br/> <br/>The market opens at 7:00 and closes at 22:00 everyday. When the market closes, all the remaining orders are cancelled. To keep complete record of the market, the system of the market saves all the orders it received everyday.<br/> <br/> The manager of the market asked the system administrator to make a program which reports the activity of the market. The report must contain two kinds of information. For each commodity the report must contain information on the lowest, the average and the highest prices of successful deals. For each dealer, the report must contain information on the amounts the dealer paid and received for commodities.<br/> <br/></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several data sets. Each data set represents the record of the market on one day. The first line of each data set contains an integer n (n &lt; 1000) which is the number of orders in the record. Each line of the record describes an order, consisting of the name of the dealer, the type of the order, the name of the commodity and the quoted price. They are separated by a single space character.<br/> <br/>The name of a dealer consists of capital alphabetical letters and is less than 10 characters in length. The type of an order is indicated by a string, "BUY" or "SELL". The name of a commodity is a single capital letter. The quoted price is a positive integer less than 1000.<br/> <br/> The orders in a record are arranged according to time when they were received and the first line of the record corresponds to the oldest order. <br/> <br/>The end of the input is indicated by a line containing a zero.<br/></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each data set consists of two parts separated by a line containing two hyphen ('-') characters.<br/> <br/>The first part is output for commodities. For each commodity, your program should output the name of the commodity and the lowest, the average and the highest prices of the successful deals in on line. The name and the prices in a line should be separated by a space character. The average price is rounded downward to the nearest integer. The output should contain only the commodities for which deals are made and the order of the output must be alphabetic.<br/> <br/>The second part is output for dealers. For each dealer, your program should output the name of the dealer, the amounts the dealer paid and received for commodities. The name and the numbers in a line should be separated by a space character. The output should contain all the dealers who transmitted orders. The order of dealers in the output must be lexicographic on their names. The lexicographic order is the order in which words in dictionaries are arranged.<br/> <br/>The output for each data set should be followed by a line containing ten hyphen ('-') characters.<br/></div><p class="pst">Sample Input</p><pre class="sio">3
+PERLIS SELL A 300
+WILKES BUY A 200
+HAMMING SELL A 100
+4
+BACKUS SELL A 10
+FLOYD BUY A 20
+IVERSON SELL B 30
+BACKUS BUY B 40
+7
+WILKINSON SELL A 500
+MCCARTHY BUY C 300
+WILKINSON SELL C 200
+DIJKSTRA SELL B 100
+BACHMAN BUY A 400
+DIJKSTRA BUY A 600
+WILKINSON SELL A 300
+2
+ABCD SELL X 10
+ABC BUY X 15
+2
+A SELL M 100
+A BUY M 100
+0</pre><p class="pst">Sample Output</p><pre class="sio">A 150 150 150
+--
+HAMMING 0 150
+PERLIS 0 0
+WILKES 150 0
+----------
+A 15 15 15
+B 35 35 35
+--
+BACKUS 35 15
+FLOYD 15 0
+IVERSON 0 35
+----------
+A 350 450 550
+C 250 250 250
+--
+BACHMAN 350 0
+DIJKSTRA 550 0
+MACCARTHY 250 0 
+WILKINSON 0 1150
+----------
+X 12 12 12
+--
+ABC 12 0
+ABCD 0 12
+----------
+--
+A 0 0
+----------</pre><p class="pst">Source</p><div class="ptx" lang="en-US"><a href="http://poj.org/searchproblem?field=source&amp;key=Japan+2001">Japan 2001</a></div></td></tr></table>
+<font color="#333399" size="3"><p align="center">
+[<a href="http://poj.org/submit?problem_id=1407">Submit</a>]  
+ [<a href="javascript:history.go(-1)">Go Back</a>]   [<a href="http://poj.org/problemstatus?problem_id=1407">Status</a>]   
+[<a href="http://poj.org/bbs?problem_id=1407">Discuss</a>]
+</p></font>
+<p><img border="0" height="30" src="../images/home.gif" width="40"/><font size="3"><a href="../index.html">Home Page</a> </font>  <img border="0" height="30" src="../images/goback.gif" width="40"/><font size="3"><a href="javascript:history.go(-1)">Go Back</a>  <img border="0" height="30" src="../images/top.gif" width="40"/><a href="http://poj.org#top">To top</a></font><br/></p><hr/><p align="center" style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2013 Ying Fuchen,Xu Pengcheng,Xie Di<br/>Any problem, Please <a href="mailto:webmaster@poj.org">Contact Administrator</a></p></body></html>
