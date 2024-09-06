@@ -1,0 +1,232 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>FAQ</title>
+<style>
+<!--
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+.style1 {font-weight: bold}
+.style2 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style3 {color: #FF0000}
+-->
+</style>
+<link rel=stylesheet href='poj.css' type='text/css'>
+<style type="text/css">
+<!--
+.style4 {color: #000080}
+.style5 {color: #4048A9}
+-->
+</style>
+</head>
+<body leftmargin=5 link=blue alink=blue vlink=blue> 
+<table class=h1 cellpadding=0> 
+  <tr> 
+    <td width=25% alight=left><img src='images/logo1.jpg' height=100 border=0></td> 
+    <td colspan=3 bgcolor=#EAEFFD><table class=h2> 
+        <tr> 
+          <td><img border=0 src='images/logo0.gif' width=450 height=90></td> 
+          <td width=95><img border=0 src='images/logo3.gif' width=95 height=95></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table> 
+<br> 
+<table border=0 width=100% class=a cellpadding="10"> 
+  <tr> 
+    <td><h1 class="style4">Frequently Asked Questions </h1> 
+      <ol style="font-weight:bold ">
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q1"> Where does my program input from and output to?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q2"> What are the compilers provided by the judge?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q3"> Can I use shortcut keys when submitting?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q4">  How is my program judged?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q5">  What are the meanings of the judge's replies?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q6">  What does the phrase &quot;Special Judge&quot; under the problem title means?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q7"> How should I determine the end of input?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q8">  My program gets WA/TLE/RE when compiled by GCC/G++ (C/C++), but it's AC when compiled by C/C++ (GCC/G++)!</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q9">  The time limit is 1000MS. But some people's programs run for several seconds to get AC!</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q10">  My program exceeds the time limit by just 15MS. How can I improve it?</a></span></li>
+        <li><span class="style2" style="font-size: 12.0pt; font-weight: bold;" lang="EN-US">          <a href="#q11">  I have more questions.</a><br> 
+        </span></li>
+      </ol> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal style1"><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q1"></a>Q</span><span lang="EN-US" style="font-size: 12.0pt">: Where does my program input from and output to?</span></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red; font-weight: bold;">A</span><span lang="EN-US" style="font-size: 12.0pt; font-weight: bold;">:</span><span lang="EN-US" style="font-size: 12.0pt"> Your program should always input from <i><b>stdin</b></i> (standard input) and output to <i><b>stdout</b></i> (standard output). For example, you can use <i>scanf</i> in C or <i>cin</i> in C++ to read, and <i>printf</i> in C or <i>cout</i> in C++ to write.</span> <span lang="EN-US" style="font-size: 12.0pt">User programs are <strong>NOT</strong> allowed to <strong>open and read from/write to any file</strong>. You will probably get responded with <font color="#FF0000">Runtime Error</font> or <font color="#FF0000">Wrong Answer</font> if you try to do so.&nbsp;</span></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt">More should be noted about I/O operations in C++. Due to their complex underlying implementation models, <i>cin</i> and <i>cout</i> are comparatively <strong>slower</strong> than <i>scanf</i> and <i>printf</i>.&nbsp;The difference in performance is shown by many experiences to be more significant if the program is compiled by G++. Therefore if a problem has huge input, using cin and cout will possibly lead to <font color="#FF0000">Time Limit Exceed</font>.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span style="font-size: 12.0pt" lang="EN-US"><font color="#008000"><a name="q2"></a>Q</font>: What are the compilers provided by the judge?</span></strong></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US"><font color="#FF0000">A</font>:&nbsp;Currently five compilers are provided for six language options. For <i>C</i> and <i>C++</i>, MS-VC++ 6.0 is used. For <i>GCC</i>/<i>G++</i>, MinGW GCC/G++ 3.4.2 is used. For <i>Pascal</i>, FreePascal 2.0.0 is used. For <i>Java</i>, JDK 1.5.0 is used. Below are sample solutions to <a href="problem?id=1000" class="style1">Problem 1000</a> in different languages along with some additional notes.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">C and GCC:</span></p> 
+      <p class="MsoNormal style5 style1"><span lang="EN-US" style=""><font face="Courier New" size="2">#include &lt;stdio.h&gt;</font></span></p> 
+      <p class="style5 MsoNormal"><strong><font size="2">　</font></strong></p> 
+      <p class="style5 MsoNormal"><strong><span style=""><font face="Courier New" size="2">int </font></span><font face="Courier New" size="2"><span lang="EN-US" style="">main(void)</span></font></strong></p> 
+      <p class="style5 MsoNormal"><strong><span lang="EN-US" style=""><font face="Courier New" size="2">{</font></span></strong></p> 
+      <p class="style5 MsoNormal"><strong><span lang="EN-US" style=""><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; int a, b;</font></span></strong></p> 
+      <p class="style5 MsoNormal"><strong><span lang="EN-US" style=""><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</font></span></strong></p> 
+      <p class="style5 MsoNormal"><strong><span lang="EN-US" style=""><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; printf(&quot;%d\n&quot;, a + b);</font></span></strong></p> 
+      <p class="style5 MsoNormal"><strong><span lang="en-us"><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; return 0;</font></span></strong></p> 
+      <p class="MsoNormal style5"><span lang="EN-US" style="font-weight: bold"><font face="Courier New" size="2">}</font></span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">C++ and G++:</span></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">#include &lt;iostream&gt;</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong>　</strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span style="">using namespace std;</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong>　</strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2">int<span lang="EN-US" style="">&nbsp;main(void)</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">{</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; int a, b;</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; cin &gt;&gt; a &gt;&gt; b;</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; cout &lt;&lt; a + b &lt;&lt; endl;</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; return 0;</font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">}</span></font></strong></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><strong><span style="font-size: 12.0pt" lang="EN-US">Additional notes for GCC/G++:</span></strong></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">For <strong>64-bit integers</strong>, both <i>long long int</i> and <i>__int64</i> is supported and they are equivalent. But only &quot;<b><i>%I64d</i></b>&quot; is supported when reading with <i>scanf</i> or writing with <i>printf</i>. &quot;<i>%lld</i>&quot; is not supported because GCC and G++ from MinGW use msvcrt.dll which does not support the C99 standard.</span></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">(G++ only) As required by the ISO C++ standard, the return type of the <i>main</i> function must be <i><b>int</b></i>, otherwise it will cause <font color="#008000">Compile Error</font>.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US"><i>Pascal</i>:</span></p> 
+      <p class="MsoNormal style1 style5"><font face="Courier New" size="2"><span lang="EN-US" style="">Program p1000(Input, Output); </span></font></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">Var </span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; a, b: Integer; </span></font></strong></p> 
+      <p class="MsoNormal style5"><strong>　 </strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span style="" lang="EN-US">Begin</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; Readln(a, b); </span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US" style="">&nbsp;&nbsp;&nbsp; Writeln(a + b); </span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span style="" lang="EN-US">End.</span></font></strong></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt"><i>Java</i>: </span></p> 
+      <p class="MsoNormal style1 style5"><font face="Courier New" size="2"><span lang="EN-US">import java.util.*;</span></font></p> 
+      <p class="MsoNormal style5"><strong>　</strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">public class Main</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">{</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public static void main(String args[])</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp; {</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scanner cin = new Scanner(System.in);</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int a = cin.nextInt(), b = cin.nextInt();</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(a + b);</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">&nbsp;&nbsp;&nbsp; }</span></font></strong></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">}</span></font></strong></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><strong><span style="font-size: 12.0pt" lang="EN-US">Additional notes for Java:</span></strong></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">A Java program must be submitted as a single source file. Apart from complying with restrictions imposed on all submitted programs, it must start execution in a static method named <i>main</i> in a class named <strong><i>Main</i></strong>, otherwise <font color="#008000">Compile Error</font> will be caused. Except for the aforementioned restrictions, you can implement and&nbsp; instantiate as many classes as needed. </span></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US">A program for JDK 1.4 is provided here for reference.</span></p> 
+      <p class="MsoNormal style5"><strong><font face="Courier New" size="2"><span lang="EN-US">import java.io.*;<br> 
+        import java.util.*;<br> 
+        <br> 
+        public class Main<br> 
+        {<br>
+&nbsp;&nbsp;&nbsp; public static void main (String args[]) throws Exception<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BufferedReader stdin = <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new BufferedReader(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new InputStreamReader(System.in));<br> 
+        <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String line = stdin.readLine();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StringTokenizer st = new StringTokenizer(line);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int a = Integer.parseInt(st.nextToken());<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int b = Integer.parseInt(st.nextToken());<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(a + b);<br>
+&nbsp;&nbsp;&nbsp; }<br> 
+        }</span></font></strong></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q3"></a>Q</span><span lang="EN-US" style="font-size: 12.0pt">: Can I use shortcut keys when submitting?</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span lang="EN-US" style="font-size: 12.0pt">: </span><span style="font-size: 12.0pt">Here are the shortcut keys defined in the submit page:</span></p> 
+      <table border="0" width="328"> 
+        <tr> 
+          <td width="64"><p class="style3 MsoNormal"><strong><font size="3">ALT+s</font></strong></td> 
+          <td width="250"><p class="MsoNormal"><font size="3">Submit button</font></td> 
+        </tr> 
+        <tr> 
+          <td width="64"><p class="style3 MsoNormal"><strong><font size="3">ALT+u </font></strong></td> 
+          <td width="250"><p class="MsoNormal"><font size="3">User ID field, if you haven't logged in</font></td> 
+        </tr> 
+        <tr> 
+          <td width="64"><p class="style3 MsoNormal"><strong><font size="3">ALT+l </font></strong></td> 
+          <td width="250"><p class="MsoNormal"><font size="3">Language options</font></td> 
+        </tr> 
+        <tr> 
+          <td width="64"><p class="style3 MsoNormal"><strong><font size="3">ALT+p </font></strong></td> 
+          <td width="250"><p class="MsoNormal"><font size="3">Problem ID field</font></td> 
+        </tr> 
+      </table> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q4"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: How is my program judged?</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: The judge first saves your submitted program to a file then tries to compile with the compiler corresponding to your selected language option. If compilation fails, <font color="#008000">Compile Error</font> is returned. The judge then runs your program, feeds the input data to it through the handle to its standard input and does the timing at the same time. Input data are stored in one or more files. Each file is used for judging your program exactly once. During the execution, if the judge finds that your program's running state meet the criteria for <font color="#FF0000">Runtime Error</font>, <font color="#FF0000">Time Limit Exceed</font>, </span><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Memory Limit Exceed</span></font><span lang="EN-US" style="font-size: 12.0pt"> or </span><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Output Limit Exceed</span></font><span lang="EN-US" style="font-size: 12.0pt">, the result is <strong>immediately returned</strong>. No further judging will be done. This implies that in the cases of TLE or MLE, it cannot be told whether your program will eventually produce all correct answers given sufficient resources. When your program finishes one input file and produces some output which is saved to an output file, the judge compares the output file against the file containing the corresponding expected output or uses a special judge program to check the output. If the output is incorrect and does not meet the criteria for <span class="style3">Presentation Error</span>, <font color="#FF0000">Wrong Answer</font> is returned. Otherwise the judge will run your program again to deal with the next input file. After finishing all input files, if your program has avoided the appearance of all six results mentioned above but produced some output that meets the criteria for <font color="#FF0000">Presentation Error</font>, this result is returned. Otherwise </span><span lang="EN-US" style="font-size: 12.0pt; color: blue">Accepted</span><span lang="EN-US" style="font-size: 12.0pt"> is returned.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q5"></a>Q</span><span lang="EN-US" style="font-size: 12.0pt">: What are the meanings of the judge's replies?</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span lang="EN-US" style="font-size: 12.0pt">: Here is a list of the judge's replies with their common abbreviations and exact meanings:</span></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt"><span class="style1"><font color=green>Waiting</font></span>: Your program is being judged or waiting to be judged.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: blue; font-weight: bold;">Accepted</span><span lang="EN-US" style="font-size: 12.0pt; font-weight: bold;"><span style="color: blue"> (AC)</span>:</span><span lang="EN-US" style="font-size: 12.0pt"> Congratulations! Your program has produced the correct output!</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt"><strong><font color="#FF0000">Presentation Error (PE)</font></strong>: Your program's output format is not exactly the same as required by the problem, although the output is correct. This usually means the existence of omitted or extra blank characters (white spaces, tab characters and/or new line characters) between any two non-blank characters, and/or blank lines (a line consisting of only blank characters) between any two non-blank lines. Trailing blank characters at the end of each line and trailing blank lines at the of output are not considered format errors. Check the output for spaces, blank lines, etc. against the problem's output specification.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><strong><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Wrong Answer (WA)</span></font></strong><span lang="EN-US" style="font-size: 12.0pt">: Your program does not produce the correct output. Special judge programs will possibly return Wrong Answer in place of Presentation Error for simplicity and robustness.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><strong><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Runtime Error (RE)</span></font></strong><span lang="EN-US" style="font-size: 12.0pt">: Your program has failed during the execution. Possible causes include illegal file access, stack overflow, out of range in pointer reference, floating point exception, division by zero and many others. Programs that stay not responding for a long time (not consuming CPU cycles) may also be considered to have encountered runtime errors.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><strong><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Time Limit Exceed (TLE)</span></font></strong><span lang="EN-US" style="font-size: 12.0pt">: The total time your program has run for has exceeded the limit.</span></p> 
+      <blockquote> 
+        <p class="MsoNormal"><span lang="en-us"><font size="3">Each problem has two time limits - <font color="#008000">TOTAL TIME LIMIT</font> and <font color="#008000">CASE TIME LIMIT</font>. The former is the total time allowed for your program to deal with all input files. And the latter is the total time allowed for your program to deal with a single input file. Exceeding either one will lead to <font color="#FF0000">Time Limit Exceed</font>. If you get Time Limit Exceed but find that your program has run for less time than is limited, your program must have exceeded that <font color="#008000">CASE TIME LIMIT</font>.</font></span></p> 
+        <p class="MsoNormal"><span lang="en-us"><font size="3">Problems without a special demand on the time limit for a single input file will have its case time limit is trivially set as the same as its total time limit and the phrase &quot;<font color="#008000">Case Time Limit</font>&quot; will not show up under the problem title.</font></span></p> 
+      </blockquote> 
+      <p class="MsoNormal"><span class="style1"><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Memory Limit Exceed</span></font><span lang="EN-US" style="font-size: 12.0pt"><font color="#FF0000"> (MLE)</font>:</span></span><span lang="EN-US" style="font-size: 12.0pt"> The maximum amount of memory that your program has used has exceeded the limit.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span class="style1"><font color="#FF0000"><span lang="EN-US" style="font-size: 12.0pt">Output Limit Exceed</span></font><span lang="EN-US" style="font-size: 12.0pt"><font color="#FF0000"> (OLE)</font>:</span></span><span lang="EN-US" style="font-size: 12.0pt"> Your program has produced too much output. Currently the limit is twice the size of the file containing the expected output. The most common cause of this result is that your programs falls into an infinite loop containing some output operations.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span class="style1"><font color="#008000"><span lang="EN-US" style="font-size: 12.0pt">Compile Error</span></font><span lang="EN-US" style="font-size: 12.0pt"><font color="#008000"> (CE)</font>:</span></span><span lang="EN-US" style="font-size: 12.0pt"> The compiler fails to compile your program. Warning messages are not considered errors. Click on the judge's reply to see the warning and error messages produced by the compiler.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt"><span class="style1">No such problem:</span> Either you have submitted with a non-existent problem id or the problem is currently unavailable (probably reserved for upcoming contests).</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US"><span class="style1"><font color="#FF0000">System Error</font>:</span> The judge cannot run your program. One example is that your program requires much more memory than hardware limitation.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <p class="MsoNormal"><span lang="en-us" style="font-size: 12.0pt"><span class="style1"><font color="#FF0000">Validate Error:</font></span> The special judge program fails in checking your output, which means it may contain some bugs. If you get this result, please contact the administrator. (Of course, this also means your output is probably wrong).</font></span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q6"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: What does the phrase &quot;<font color="#FF0000">Special Judge</font>&quot; under the problem title means?</span></strong></p> 
+      <p class="MsoNormal"><span style="font-size: 12.0pt" lang="EN-US"><font color="#FF0000">A</font>: When a problem has multiple acceptable answers, a special judge program is needed. The special judge program uses the input data and some other information to check your program's output and returns the result to the judge.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q7"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: How should I determine the end of input?</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: In most cases there is some information in the input that explicitly indicates the end of input, for example, number of test cases or a single line with one or more zeroes following that last test case. But in some cases you have to determine the end of file (EOF) for the end of input. In such cases, you can test the return value of <i>scanf</i> (which returns how many values have been successfully read in or <i>EOF</i> if none has been read) or <i>!cin</i>. Refer to the hints for <a href="problem?id=1001" class="style1">Problem 1001</a> for a working example.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q8"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: My program gets WA/TLE/RE when compiled by GCC/G++ (C/C++), but it's AC when compiled by C/C++ (GCC/G++)!</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: It's probably caused by some <strong>minor bugs</strong> <strong>hiding</strong> in your AC code which have not lead to visible effects due to compiler factors. It is recommended that you revise your code to fix the bugs in this case. Another possible cause is the fact that different compilers generally use different methods, libraries and settings to generate executable files. Therefore it is possible for the executable files generated by different compilers to have different efficiency or even different behaviors in some special cases. For example, the stack size of programs compiled by MS-VC++ is larger than that of those compiled by GCC/G++. A program relying on extremely deep recursion may possibly fail if compiled by GCC/G++. If you strongly believe (with sufficient evidence) what you have encountered is caused by bugs of the compilers, please let us know.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q9"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: The time limit is 1000MS. But some people's programs run for several seconds to get AC!</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: Most such programs are Java programs. As is known to all, Java programs run much slower than C/C++ programs. Therefore the time limits for Java programs are longer. Concretely speaking, Java programs are allowed to run for <strong>THREE</strong> <strong>TIMES</strong> the time limit and are given another <strong>150MS</strong> for <strong>each input file</strong> out of consideration for I/O efficiency. If the program your find does not belong to any case mentioned above, please let us know.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q10"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: My program exceeds the time limit by just 15MS. How can I improve it?</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: In most cases your program actually requires much more time than the time limit. The judge kills the process instantiating your program once the time limit is exceeded. Usually this occurs 15MS after the limit is exceeded. Common skills in code improvement include reducing constant factor and using efficient algorithms.</span></p> 
+      <p class="MsoNormal">　</p> 
+      <hr noshade color=#FFFFFF> 
+      <p class="MsoNormal"><strong><span lang="EN-US" style="font-size: 12.0pt; color: green"><a name="q11"></a>Q</span><span style="font-size: 12.0pt" lang="EN-US">: I have more questions.</span></strong></p> 
+      <p class="MsoNormal"><span lang="EN-US" style="font-size: 12.0pt; color: red">A</span><span style="font-size: 12.0pt" lang="EN-US">: Please make full use of our web board. Post your questions in a nice way. The administrators and other users will try to help you.</span></p></td> 
+  </tr> 
+</table> 
+<p><img height=30 src=images/home.gif width=40 border=0><font size=3><a href=.>Home Page</a> </font>&nbsp;&nbsp;<img height=30 src=images/goback.gif width=40 border=0><font size=3><a href=javascript:history.go(-1)>Go Back</a>&nbsp;&nbsp;<img height=30 width=40 border=0 src=images/top.gif><a href=#top>To top</a></font><br> 
+</p> 
+<hr> 
+<P align=center style="font-family:Arial, Helvetica, sans-serif">All Rights Reserved 2003-2006 Ying Fuchen,Xu Pengcheng,Xie Di<br> 
+  Any problem, Please <a href=mailto:stycbackup@gmail.com>Contact Administrator</a></p> 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script> 
+<script type="text/javascript">_uacct="UA-790353-1";urchinTracker();</script> 
+</body>
+</html>
